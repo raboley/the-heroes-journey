@@ -1,6 +1,6 @@
 # The Heroes Journey
 
-@todo add a PDD badge
+# @todo #1 add a PDD badge
 
 The hero will go through a journey to take drab README.mds into a new world allowing for flexibility and a new level of embedding for code. He will bring these learnings back to his home making all this documentation clear and executable.
 
