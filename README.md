@@ -1,7 +1,11 @@
 # The Heroes Journey
 
 ## ACT 1
+
 1. The Ordinary World
+
+In the beginning there was only text. Documentation was akin to only what could be produced using notepad. The humble README.md lived to serve with his only tool of raw text.
+
 2. The Call of Adventure
 3. Refusal of the Call
 4. Meeting the Mentor
