@@ -17,8 +17,11 @@ As time went on applications became more complex, and README began etching more 
 4. Meeting the Mentor
 
 One day a woman named Ruby entered README's office. Ruby had a red romper that seemed to move as wind brushed against her sides. She looked at the documents README produced and looked perplexed.
+She brings him a stone slate.
 
 5. Crossing the First Threshold
+
+Looking at the slate he can see an entire world inside it.
 
 ## ACT 2
 
