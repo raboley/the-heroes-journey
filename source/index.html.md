@@ -32,5 +32,3 @@ This example API documentation page was created with [Slate](https://github.com/
 # ../scripts/embedme.sh
 ```
 
-
-
