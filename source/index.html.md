@@ -33,4 +33,3 @@ This example API documentation page was created with [Slate](https://github.com/
 
 npx embedme ./source/index.html.md
 ```
-
