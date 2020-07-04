@@ -4,12 +4,12 @@ The hero will go through a journey to take drab README.mds into a new world allo
 
 this will include:
 
-* Embedding the contents of code files into documentation
-* Enabling tab controls to allow for multiple versions of code to be contained in one set of documentation
-* Embed diagramming into documentation as a living diagram not an image
-* Automatically create issues using puzzle development
-* ?generate diagrams for infrastructure from terraform code
-* Execute examples in documentation to test for accuracy 
+* Embedding the contents of code files into documentation ([embedme](https://github.com/zakhenry/embedme))
+* Enabling tab controls to allow for multiple versions of code to be contained in one set of documentation ([slate](https://github.com/slatedocs/slate/wiki/Markdown-Syntax))
+* Embed diagramming into documentation as a living diagram not an image ([lucidChart + Github](https://www.lucidchart.com/pages/integrations/github))
+* Automatically create issues using puzzle development ([pdd](http://www.0pdd.com))
+* ?generate diagrams for infrastructure from terraform code ([cloudCraft](https://medium.com/faun/modules-tf-convert-visual-aws-diagram-into-terraform-configurations-e61fb0574b10))
+* Execute examples in documentation to test for accuracy ([dredd](https://rollout.io/blog/testing-code-examples-in-documentation/))
 
 ## ACT 1
 
