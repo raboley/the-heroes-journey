@@ -30,5 +30,7 @@ This example API documentation page was created with [Slate](https://github.com/
 
 ```sh
 # ../scripts/embedme.sh
+
+npx embedme ./source/index.html.md
 ```
 
