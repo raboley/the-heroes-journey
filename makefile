@@ -1,0 +1,2 @@
+docs:
+	. ./scripts/embedme.sh

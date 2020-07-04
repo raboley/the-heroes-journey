@@ -38,6 +38,15 @@ README runs his fingers across the words and in the crevices light begins to eru
 ## ACT 2
 
 6. Tests, Allies, Enemies
+
+Time and Help enter as enemies to README, time causing his documentation to become out of date due to Help adding features and not updating documentation.
+
+Coming across embedme he found that the steps written as scripts could now be embedded into his documents automatically. simply by runing `npx embedme ./source/index.html.md` he was able to pull the contents from his scripts and embed them in the file automatically allowing for every step to be captured in a way that requires setup steps to work.
+
+He later found make who helped him even further strengthen his resolve. By using `make docs` he was able to run all the steps required to generate the documentation in a way that was repeatable. Now if only this step could also be run automatically when Help added new features.
+
+> enter git commit hooks
+
 7. Approach to the Inmost Cave
 8. The Ordeal
 9. Reward (Seizing the Sword)
