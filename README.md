@@ -2,9 +2,6 @@
 
 The hero will go through a journey to take drab README.mds into a new world allowing for flexibility and a new level of embedding for code. He will bring these learnings back to his home making all this documentation clear and executable.
 
-<div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/3bb76760-6e9b-4405-bd06-0f20594a0c6c" id="mOfa7samMO-B"></iframe></div>
-
-
 this will include:
 
 * Embedding the contents of code files into documentation ([embedme](https://github.com/zakhenry/embedme))
