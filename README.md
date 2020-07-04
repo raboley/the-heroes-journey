@@ -47,6 +47,10 @@ He later found make who helped him even further strengthen his resolve. By using
 
 > enter git commit hooks
 
+Now that we have a git hook to automatically update the index.html.md we found it slowed down the commit process, so we only wanted to run it if the scripts directory or index.html.md file were modified.
+
+To do that we need to update the githook with some if logic.
+
 7. Approach to the Inmost Cave
 8. The Ordeal
 9. Reward (Seizing the Sword)
