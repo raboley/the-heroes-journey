@@ -2,6 +2,8 @@
 
 The hero will go through a journey to take drab README.mds into a new world allowing for flexibility and a new level of embedding for code. He will bring these learnings back to his home making all this documentation clear and executable.
 
+![https://app.lucidchart.com/documents/view/3bb76760-6e9b-4405-bd06-0f20594a0c6c/vDj40wWFWHu_](https://app.lucidchart.com/documents/view/3bb76760-6e9b-4405-bd06-0f20594a0c6c/vDj40wWFWHu_)
+
 this will include:
 
 * Embedding the contents of code files into documentation ([embedme](https://github.com/zakhenry/embedme))
@@ -9,7 +11,9 @@ this will include:
 * Embed diagramming into documentation as a living diagram not an image ([lucidChart + Github](https://www.lucidchart.com/pages/integrations/github))
 * Automatically create issues using puzzle development ([pdd](http://www.0pdd.com))
 * ?generate diagrams for infrastructure from terraform code ([cloudCraft](https://medium.com/faun/modules-tf-convert-visual-aws-diagram-into-terraform-configurations-e61fb0574b10))
-* Execute examples in documentation to test for accuracy ([dredd](https://rollout.io/blog/testing-code-examples-in-documentation/))
+* Execute examples in documentation to test for accuracy ([dredd](https://rollout.io/blog/testing-code-examples-in-documentation/)) ([official](https://dredd.org/en/latest/))
+
+
 
 ## ACT 1
 
