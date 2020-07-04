@@ -1,5 +1,16 @@
 # The Heroes Journey
 
+The hero will go through a journey to take drab README.mds into a new world allowing for flexibility and a new level of embedding for code. He will bring these learnings back to his home making all this documentation clear and executable.
+
+this will include:
+
+* Embedding the contents of code files into documentation
+* Enabling tab controls to allow for multiple versions of code to be contained in one set of documentation
+* Embed diagramming into documentation as a living diagram not an image
+* Automatically create issues using puzzle development
+* ?generate diagrams for infrastructure from terraform code
+* Execute examples in documentation to test for accuracy 
+
 ## ACT 1
 
 1. The Ordinary World
