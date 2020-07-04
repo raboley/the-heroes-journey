@@ -23,6 +23,18 @@ She brings him a stone slate.
 
 Looking at the slate he can see an entire world inside it.
 
+// maybe he comes across the slate as he is doing documentation as an example?
+
+On the stone slate there are words etched into it face.
+
+```shell
+bundle exec middleman server
+```
+
+README runs his fingers across the words and in the crevices light begins to erupt and cause the tablet to shift into the symbols:
+
+[http://192.168.0.49:4567](http://192.168.0.49:4567)
+
 ## ACT 2
 
 6. Tests, Allies, Enemies
