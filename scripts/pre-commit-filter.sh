@@ -3,7 +3,7 @@
 # this would then output
 # matches: [source/index.html.md\|scripts/]
 
-# @todo #1 Add the build badge for PDD
+# @todo #1 Add the build badge for PDD. I added 0pdd as a contributor, maybe it will work now?
 # Actually best thing to do is grep the index.html.md file to 
 # search for files that are referenced in that, and then only run it
 # if a matching file in there is updated. (or itself)
