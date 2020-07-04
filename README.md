@@ -51,7 +51,7 @@ Now that we have a git hook to automatically update the index.html.md we found i
 
 To do that we need to update the githook with some if logic.
 
-By getting the diff and then grepping those files for the pattern we can run the commit hook only when files we expect to cause changes in the index.html.md to be impacted
+By getting the diff and then grepping those files for the pattern we can run the commit hook only when files we expect to cause changes in the index.html.md to be impacted. Now it should hopefully go really fast when I commit these things.
 
 7. Approach to the Inmost Cave
 8. The Ordeal
