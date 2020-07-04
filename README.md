@@ -2,7 +2,7 @@
 
 The hero will go through a journey to take drab README.mds into a new world allowing for flexibility and a new level of embedding for code. He will bring these learnings back to his home making all this documentation clear and executable.
 
-![https://app.lucidchart.com/documents/view/3bb76760-6e9b-4405-bd06-0f20594a0c6c/vDj40wWFWHu_](https://app.lucidchart.com/documents/view/3bb76760-6e9b-4405-bd06-0f20594a0c6c/vDj40wWFWHu_)
+![Roadmap](https://app.lucidchart.com/documents/edit/3bb76760-6e9b-4405-bd06-0f20594a0c6c/vDj40wWFWHu_?beaconFlowId=A4D3CA5E39A980DB#?folder_id=home&browser=icon)
 
 this will include:
 
