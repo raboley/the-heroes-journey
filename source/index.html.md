@@ -31,6 +31,6 @@ This example API documentation page was created with [Slate](https://github.com/
 ```sh
 # ../scripts/embedme.sh
 
+# testing the new filter
 npx embedme ./source/index.html.md
 ```
-
