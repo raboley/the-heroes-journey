@@ -1,1 +1,0 @@
-npx embedme ./source/index.html.md
