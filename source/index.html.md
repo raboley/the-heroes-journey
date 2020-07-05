@@ -189,10 +189,19 @@ Example: Simply by going to lucid chart and creating a new document, then select
 
 Now whenever that [source lucid chart](https://app.lucidchart.com/documents/edit/e9f142be-ca5e-4177-8f14-36c544f655ca/-gyaVl7tAo0L#?folder_id=home&browser=icon) is updated you will see it update here shortly after. No more repeat copy paste or stale diagrams
 
-
 # Small Incremental changes with PDD
 
-@todo #12:60mins Describe PDD with links to talks, explain how to create puzzles, setup githooks locally, install pdd, and close puzzles with examples.
+@todo #18:15mins Create the problem, solution and example for PDD.
+
+@todo #18:15mins How does PDD work? include reference to the pdd webinar.
+
+@todo #18:30mins Show example workflow of PDD to create a puzzle, be lazy and create another puzzle to finish that.
+
+@todo #18:30mins explain how to run PDD locally by installing it, talking about how you should be careful of the words to do when they are todgether.
+
+@todo #18:30mins explain to setup the git hook for pdd
+
+@todo #18:30mins explain how to setup the pdd git action in GitHub
 
 # Generate Infrastructure Diagrams from Terraform With CloudCraft
 
