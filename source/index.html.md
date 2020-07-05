@@ -106,7 +106,14 @@ The result of all that leaves us with an [./source/index.html.md](./source/index
 
 # Multiple Language Tab Options with Slate
 
-@todo #10:15mins Document what slate is and installation process
+Problem: Code is complicated, and sometimes you have differnet languages, operating systems or frameworks to deal with and normal markdown just isn't enough. There needs to be an easier to navigate documentation system that allows for langauge tabs and more dynamic documentation styles.
+
+Solution: [Slate](https://github.com/slatedocs/slate) is web based documentation system that has a description pane and a code pane so that it is easy to follow code examples on the right hand side of the window, and more prose like descriptions in the middle with an easy to navigate table of contents on the left. It even has search functionality. The best thing about slate is you can embed code examples and allow users to select from different tabs based on what is needed for them. It also lets you embed html into the document, so more advanced constructs can be added such as embedding a live lucidchart into the documentation. All this allows for documentation to be live realtime, more easy to understand and navigate while all being written in an [extended markdown](https://github.com/slatedocs/slate/wiki/Markdown-Syntax) syntax.
+
+Installation: 
+To add slate to your project the easist thing is to clone their repo, and start modifying it to fit your project as described in their [getting started guide](https://github.com/slatedocs/slate/wiki/Using-Slate-Natively). Once you have a slate project setup or you have just downloaded a repo with slate that you want to work on locally, you can install dependencies depending on your OS, such as these [macOS dependency install instructions](https://github.com/slatedocs/slate/wiki/Using-Slate-Natively#installing-dependencies-on-macos)
+
+after you have the dependencies installed you can run `make init` to install all the ruby gems needed for slate to run successfully. Under the hood it is just a `bundle install` command.
 
 @todo #10:15mins Document how to run slate locally
 
