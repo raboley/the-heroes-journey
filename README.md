@@ -1,5 +1,6 @@
 # The Heroes Journey
 
+[![PDD status](http://www.0pdd.com/svg?name=raboley/the-heroes-journey)](http://www.0pdd.com/p?name=raboley/the-heroes-journey)
 
 The hero will go through a journey to take drab README.mds into a new world allowing for flexibility and a new level of embedding for code. He will bring these learnings back to his home making all this documentation clear and executable.
 
