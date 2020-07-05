@@ -163,6 +163,8 @@ Solution: Lucid chart allows you to embed charts as html objects, and slate allo
 
 Example: Simply by going to lucid chart and creating a new document, then select embed and copy the embed url.
 
+@todo #24:15mins The link doesn't work when published to github pages. Should show gif not nothing.
+
 ![lucid_chart_embed_link_demo.gif](../docs/videos/lucid_chart_embed_link_demo.gif)
 
 > You can screen cap your screen on mac using
