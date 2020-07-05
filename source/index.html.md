@@ -26,13 +26,34 @@ This example API documentation page was created with [Slate](https://github.com/
 
 <div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/3bb76760-6e9b-4405-bd06-0f20594a0c6c" id="mOfa7samMO-B"></iframe></div>
 
-# Authentication
-
-> To authorize, use this code:
-
+# Initialization
+  
 ```sh
 # ../scripts/embedme.sh
 
 # testing the new filter
 npx embedme ./source/index.html.md
+```
+
+
+There are a couple things that run locally to help with development of this repo.
+
+## Up to date scripts with embedme
+
+## Quick, Small iterative issues with PDD
+
+PDD is a style of development that breaks tasks down into small puzzles that can be created, at a high level then get the most basic lazy implementation added, leaving behind smaller todos called puzzles to finish the rest of the implementation.
+
+Puzzles can be added using tags, and running pdd locally will help debug if your puzzle tags are not correct.
+
+```sh
+# ../scripts/install-pdd.sh
+
+gem install pdd
+```
+
+will install pdd locally which can then be run in terminal with
+
+```sh
+pdd
 ```

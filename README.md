@@ -6,6 +6,10 @@ found more documentation in the [pdd source code](https://github.com/yegor256/pd
  * @todo #2:30m/DEV create an issue for the first time using pdd
  */
 
+Maybe I can get it to work locally?
+
+
+
 The hero will go through a journey to take drab README.mds into a new world allowing for flexibility and a new level of embedding for code. He will bring these learnings back to his home making all this documentation clear and executable.
 
 this will include:
