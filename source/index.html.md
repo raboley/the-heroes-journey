@@ -115,7 +115,13 @@ To add slate to your project the easist thing is to clone their repo, and start 
 
 after you have the dependencies installed you can run `make init` to install all the ruby gems needed for slate to run successfully. Under the hood it is just a `bundle install` command.
 
-@todo #10:15mins Document how to run slate locally
+## Running Slate locally
+
+To run slate locally simply run `make serve-docs` to serve the documents on your localhost. then you can go to [http://192.168.0.49:4567](http://192.168.0.49:4567) to view your documents locally. The nice thing is as long as the process is running you can make updates to this document and then refresh the browser to see the effects.
+
+@todo #22:30mins For slate figure out a good way to do local development with an auto refresh like situation.
+
+This browser link happens using the [middleman](https://middlemanapp.com/basics/install/) web server application. It will host the website using ruby runtime.
 
 @todo #10:30mins Document how to publish slate to github pages
 
