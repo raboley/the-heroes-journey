@@ -480,7 +480,18 @@ To add slate to your project the easist thing is to clone their repo, and start 
 
 <p>After it has been done the first time the github action should be able to successfully publish your docs to your url.</p>
 <h1 id='diagrams-embedded-into-documentation-using-lucidchart'>Diagrams embedded into Documentation using Lucidchart</h1>
-<p>@todo #17:15mins Create the problem, solution and example blocks.</p>
+<p>Problem: High leven design charts quickly become out of date if they are hard coded into documentation as an image. They are also much less valuable if they only exist as a url.</p>
+
+<p>Solution: Lucid chart allows you to embed charts as html objects, and slate allows you to publish raw html leading to documentation always being up to date with source design charts.</p>
+
+<p>Example: Simply by going to lucid chart and creating a new document, then selecting embed you can get an embed html object like below:</p>
+<div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 480px; height: 360px; margin: 10px; position: relative;"</span><span class="nt">&gt;&lt;iframe</span> <span class="na">allowfullscreen</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">style=</span><span class="s">"width:480px; height:360px"</span> <span class="na">src=</span><span class="s">"https://app.lucidchart.com/documents/embeddedchart/e9f142be-ca5e-4177-8f14-36c544f655ca"</span> <span class="na">id=</span><span class="s">"phyaKTPhMxyz"</span><span class="nt">&gt;&lt;/iframe&gt;&lt;/div&gt;</span>
+</code></pre></div>
+<p>Which will render a living document in slate like below:</p>
+
+<div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/e9f142be-ca5e-4177-8f14-36c544f655ca" id="phyaKTPhMxyz"></iframe></div>
+
+<p>Now whenever that <a href="https://app.lucidchart.com/documents/edit/e9f142be-ca5e-4177-8f14-36c544f655ca/-gyaVl7tAo0L#?folder_id=home&amp;browser=icon">source lucid chart</a> is updated you will see it update here shortly after. No more repeat copy paste or stale diagrams</p>
 
 <p>@todo #17:15mins Add screenshots (bonus points for gif) of how to add an embed link to this documentation.</p>
 <h1 id='small-incremental-changes-with-pdd'>Small Incremental changes with PDD</h1>
