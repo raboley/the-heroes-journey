@@ -3,7 +3,7 @@ name: pdd
 
 on:
   push:
-    branches: [ 'main' ]
+    branches: [ '*' ]
 
 jobs:
   deploy:
@@ -18,4 +18,5 @@ jobs:
       with:
         ruby-version: ${{ env.ruby-version }}
     - run: make init
+    - run: pdd
 
