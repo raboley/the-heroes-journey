@@ -1,0 +1,562 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>The Magical World</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-24e99be0.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-1e815a84.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#script-examples-in-documentation-using-embedme" class="toc-h1 toc-link" data-title="Script Examples in Documentation using Embedme">Script Examples in Documentation using Embedme</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#githook" class="toc-h2 toc-link" data-title="Githook">Githook</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#multiple-language-tab-options-with-slate" class="toc-h1 toc-link" data-title="Multiple Language Tab Options with Slate">Multiple Language Tab Options with Slate</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#running-slate-locally" class="toc-h2 toc-link" data-title="Running Slate locally">Running Slate locally</a>
+                  </li>
+                  <li>
+                    <a href="#deploying-your-docs-to-github-pages" class="toc-h2 toc-link" data-title="Deploying Your docs to Github Pages">Deploying Your docs to Github Pages</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#diagrams-embedded-into-documentation-using-lucidchart" class="toc-h1 toc-link" data-title="Diagrams embedded into Documentation using Lucidchart">Diagrams embedded into Documentation using Lucidchart</a>
+          </li>
+          <li>
+            <a href="#small-incremental-changes-with-pdd" class="toc-h1 toc-link" data-title="Small Incremental changes with PDD">Small Incremental changes with PDD</a>
+          </li>
+          <li>
+            <a href="#generate-infrastructure-diagrams-from-terraform-with-cloudcraft" class="toc-h1 toc-link" data-title="Generate Infrastructure Diagrams from Terraform With CloudCraft">Generate Infrastructure Diagrams from Terraform With CloudCraft</a>
+          </li>
+          <li>
+            <a href="#execute-code-examples-in-documentation-with-dredd" class="toc-h1 toc-link" data-title="Execute Code Examples in Documentation with DREDD">Execute Code Examples in Documentation with DREDD</a>
+          </li>
+          <li>
+            <a href="#initialization" class="toc-h1 toc-link" data-title="Initialization">Initialization</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#up-to-date-scripts-with-embedme" class="toc-h2 toc-link" data-title="Up to date scripts with embedme">Up to date scripts with embedme</a>
+                  </li>
+                  <li>
+                    <a href="#quick-small-iterative-issues-with-pdd" class="toc-h2 toc-link" data-title="Quick, Small iterative issues with PDD">Quick, Small iterative issues with PDD</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+
+<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+
+<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+
+<div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/3bb76760-6e9b-4405-bd06-0f20594a0c6c" id="mOfa7samMO-B"></iframe></div>
+<h1 id='script-examples-in-documentation-using-embedme'>Script Examples in Documentation using Embedme</h1>
+<p>Problem: I create documentation with code samples from scripts that become out of date as I update scripts but forget to update the overall documentation.</p>
+
+<p>Solution: embed script paths into script blocks and run embedme prior to commit so that it will populate script contents into the script blocks automatically keeping any script content up to date.
+This is run as a git pre-commit hook so that prior to a commit that impacts either the scripts directory, or the index.html.md file, embedme will run and update any urls then add the files and commit them.</p>
+
+<p>Example: script blocks need to have specific extensions for embedme to work. There are a lot of scriptblock extensions documented in the <a href="https://github.com/zakhenry/embedme#multi-language">README.md for embedme</a>. The <a href="https://github.com/zakhenry/embedme#embedme">EmbedMe README.md</a> does a great job explaining how it works with a simple gif example at the top, but for an example used in this repo see below explaining how the pre-commit hook works.</p>
+
+<blockquote>
+<p>Note that the path to the script needs to be absolute, or relative to the path of the script being injected. That is why the paths below are ../ because this file is in the source/ directory, and not the root so we need the scripts to be referenced one directory above.</p>
+</blockquote>
+
+<p>For this example I will purposely use shell, when it needs to be sh for embedme to work on shell scripts (so my example stays in tact). Below is a shell block with a reference to the file .pre-commit.sh and nothing else.</p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># ../.pre-commit.sh</span>
+</code></pre></div>
+<p>After running embedme on this example <strong>note I would have to change shell to sh for this to work, which can be seen in the next example.</strong></p>
+<div class="highlight"><pre class="highlight sh tab-shell"><code>npx embedme ./source/index.html.md
+</code></pre></div>
+<p>Then the contents of the precommit script will automatically be updated in the script block like below.</p>
+<div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># ../.pre-commit.sh</span>
+
+<span class="nb">source</span> ~/.bash_profile
+<span class="c"># embedme pre-commit hook so that if some script or documentation </span>
+<span class="c"># was updated to include more scripts the documentation pages get updated</span>
+<span class="nb">.</span> ./scripts/pre-commit-filter.sh <span class="s2">". scripts/embedme.sh; git add ./source/index.html.md"</span>
+<span class="c"># Pdd pre-commit hook so that if there is going to a pdd issue it is caught prior to commit.</span>
+<span class="nb">.</span> ./scripts/pdd-commit-hook.sh
+</code></pre></div>
+<p>This command is idempotent, so it can be run over and over again. This will allow us to update this script block automatically as the underlying scripts are updated. The next question is how do we make this happen automatically? Enter <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">githooks</a>.</p>
+<h2 id='githook'>Githook</h2>
+<p>The embedme command gets right before commiting to ensure that the index.html.md file is always up to date. This is achieved through adding a git <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">pre-commit hook</a>. This is a script that is stored in the .git/hooks directory of your project and is not normally saved in source control. by naming the file <code>pre-commit</code> it tells git to run that script prior to commiting any code. In this repo we store the script in source control, and then create a <a href="https://www.makeuseof.com/tag/what-is-a-symbolic-link-what-are-its-uses-makeuseof-explains/">symlink</a> during the <code>make init</code> command so that every person that uses this repo can have the same pre-commit hook without manual steps of creating it and putting it in the .git/hooks directory of their project.</p>
+
+<p>that causes the <a href=".pre-commit.sh">.pre-commit.sh</a> script to get run every time a user commits their code to this repo.</p>
+
+<p>That script runs some more scripts in it, but we will focus on one.</p>
+<div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># ../.pre-commit.sh</span>
+
+<span class="nb">source</span> ~/.bash_profile
+<span class="c"># embedme pre-commit hook so that if some script or documentation </span>
+<span class="c"># was updated to include more scripts the documentation pages get updated</span>
+<span class="nb">.</span> ./scripts/pre-commit-filter.sh <span class="s2">". scripts/embedme.sh; git add ./source/index.html.md"</span>
+<span class="c"># Pdd pre-commit hook so that if there is going to a pdd issue it is caught prior to commit.</span>
+<span class="nb">.</span> ./scripts/pdd-commit-hook.sh
+</code></pre></div>
+<p>The pre-commit-filter.sh script referenced above will run the commands passed to it only if it meets a given criteria. In this case it is if any of the staged files are in the /scripts directory, or are the <a href="./source/index.html.md">./source/index.html.md</a> file.</p>
+
+<p>This is because the pre-commit hook using npx takes time to run, and we only want to run it if a file that could potentially be used in that as a reference is updated.</p>
+
+<p>Then the commands passed in are to run the embedme.sh script, and then add the new updated <a href="./source/index.html.md">./source/index.html.md</a> that has been modified by the embedme command. </p>
+
+<p>The embedme.sh script is very simple</p>
+<div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># ../scripts/embedme.sh</span>
+
+<span class="c"># testing the new filter</span>
+npx embedme ./source/index.html.md
+</code></pre></div>
+<p>which just runs the command to embed source code in the <a href="./source/index.html.md">./source/index.html.md</a> file.</p>
+
+<p>The git add is very important to do after that, otherwise it will update the file, but not commit it leaving the next change to be commited manually by the user.</p>
+
+<p>The result of all that leaves us with an <a href="./source/index.html.md">./source/index.html.md</a> file that is always up to date with any code files that are embedded within it.</p>
+<h1 id='multiple-language-tab-options-with-slate'>Multiple Language Tab Options with Slate</h1>
+<p>Problem: Code is complicated, and sometimes you have differnet languages, operating systems or frameworks to deal with and normal markdown just isn&#39;t enough. There needs to be an easier to navigate documentation system that allows for langauge tabs and more dynamic documentation styles.</p>
+
+<p>Solution: <a href="https://github.com/slatedocs/slate">Slate</a> is web based documentation system that has a description pane and a code pane so that it is easy to follow code examples on the right hand side of the window, and more prose like descriptions in the middle with an easy to navigate table of contents on the left. It even has search functionality. The best thing about slate is you can embed code examples and allow users to select from different tabs based on what is needed for them. It also lets you embed html into the document, so more advanced constructs can be added such as embedding a live lucidchart into the documentation. All this allows for documentation to be live realtime, more easy to understand and navigate while all being written in an <a href="https://github.com/slatedocs/slate/wiki/Markdown-Syntax">extended markdown</a> syntax.</p>
+
+<p>Installation: 
+To add slate to your project the easist thing is to clone their repo, and start modifying it to fit your project as described in their <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively">getting started guide</a>. Once you have a slate project setup or you have just downloaded a repo with slate that you want to work on locally, you can install dependencies depending on your OS, such as these <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively#installing-dependencies-on-macos">macOS dependency install instructions</a></p>
+
+<p>after you have the dependencies installed you can run <code>make init</code> to install all the ruby gems needed for slate to run successfully. Under the hood it is just a <code>bundle install</code> command.</p>
+<h2 id='running-slate-locally'>Running Slate locally</h2>
+<p>To run slate locally simply run <code>make serve-docs</code> to serve the documents on your localhost. then you can go to <a href="http://192.168.0.49:4567">http://192.168.0.49:4567</a> to view your documents locally. The nice thing is as long as the process is running you can make updates to this document and then refresh the browser to see the effects.</p>
+
+<p>@todo #22:30mins For slate figure out a good way to do local development with an auto refresh like situation.</p>
+
+<p>This browser link happens using the <a href="https://middlemanapp.com/basics/install/">middleman</a> web server application. It will host the website using ruby runtime.</p>
+
+<p>@todo #10:30mins Document how to publish slate to github pages</p>
+<h2 id='deploying-your-docs-to-github-pages'>Deploying Your docs to Github Pages</h2>
+<p>Once you have your slate docs working locally you can <a href="https://github.com/slatedocs/slate/wiki/Deploying-Slate">publish them to GitHub Pages</a>.</p>
+
+<p>This repo is setup with a GitHub action that will do this automatically on <code>master</code> branch.</p>
+
+<blockquote>
+<p>if you use the slate repo as a template it will also have the github action setup to do so on <code>main</code> branch.</p>
+</blockquote>
+
+<p>The GitHub action is configured in the [.github/workflows/deploy.yml] file. It will run the steps to publish this documentation to GitHub pages.</p>
+<h1 id='diagrams-embedded-into-documentation-using-lucidchart'>Diagrams embedded into Documentation using Lucidchart</h1>
+<p>@todo #11:15mins Show process for embedding lucid charts into the slate document.</p>
+<h1 id='small-incremental-changes-with-pdd'>Small Incremental changes with PDD</h1>
+<p>@todo #12:60mins Describe PDD with links to talks, explain how to create puzzles, setup githooks locally, install pdd, and close puzzles with examples.</p>
+<h1 id='generate-infrastructure-diagrams-from-terraform-with-cloudcraft'>Generate Infrastructure Diagrams from Terraform With CloudCraft</h1>
+<p>@todo #13:60mins Describe cloudcraft, create terraform files as an example, link the cloudcraft diagram to this somehow.</p>
+<h1 id='execute-code-examples-in-documentation-with-dredd'>Execute Code Examples in Documentation with DREDD</h1>
+<p>@todo #14:60mins Describe DREDD, install process, how to write a test in documentation, execute the tests and create a github action to run these tests.</p>
+<h1 id='initialization'>Initialization</h1><div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># ../scripts/embedme.sh</span>
+
+<span class="c"># testing the new filter</span>
+npx embedme ./source/index.html.md
+</code></pre></div>
+<p>There are a couple things that run locally to help with development of this repo.</p>
+<h2 id='up-to-date-scripts-with-embedme'>Up to date scripts with embedme</h2><h2 id='quick-small-iterative-issues-with-pdd'>Quick, Small iterative issues with PDD</h2>
+<p>PDD is a style of development that breaks tasks down into small puzzles that can be created, at a high level then get the most basic lazy implementation added, leaving behind smaller todos called puzzles to finish the rest of the implementation.</p>
+
+<p>Puzzles can be added using tags, and running pdd locally will help debug if your puzzle tags are not correct.</p>
+<div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># ../scripts/install-pdd.sh</span>
+
+gem <span class="nb">install </span>pdd
+<span class="c"># Adding ruby gems to the path if it doesn't exist already</span>
+<span class="k">if</span> <span class="o">!</span> <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$PATH</span><span class="s2">"</span> | <span class="nb">grep</span> <span class="nt">--quiet</span> <span class="s2">"/usr/local/lib/ruby/gems/2.7.0/bin"</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"No ruby in path"</span>
+    <span class="k">if</span> <span class="o">!</span> <span class="nb">grep</span> <span class="nt">--quiet</span> <span class="s2">"/usr/local/lib/ruby/gems/2.7.0/bin"</span> ~/.bash_profile<span class="p">;</span> <span class="k">then
+        </span><span class="nb">echo</span> <span class="s2">"Adding ruby gems to profile"</span>
+        <span class="nb">echo export </span><span class="nv">PATH</span><span class="o">=</span><span class="s1">'"/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"'</span> <span class="o">&gt;&gt;</span> ~/.bash_profile
+        <span class="nb">echo</span> <span class="s1">'pdd has been installed and added to your path. Either restart your terminal or enter the command `source ~/.bash_profile`'</span>
+        <span class="nb">echo</span> <span class="s1">'then you can use `pdd` to see what the output of pdd will be when pushed to the server'</span>
+    <span class="k">fi
+fi</span>
+</code></pre></div>
+<p>will install pdd locally which can then be run in terminal with</p>
+<div class="highlight"><pre class="highlight sh tab-shell"><code>pdd
+</code></pre></div><h1 id='errors'>Errors</h1>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
