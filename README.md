@@ -1,14 +1,5 @@
 # The Heroes Journey
 
-found more documentation in the [pdd source code](https://github.com/yegor256/pdd), maybe this will work?
-
-/**
- * @todo #2:30m/DEV create an issue for the first time using pdd
- */
-
-Maybe I can get it to work locally?
-
-
 
 The hero will go through a journey to take drab README.mds into a new world allowing for flexibility and a new level of embedding for code. He will bring these learnings back to his home making all this documentation clear and executable.
 
@@ -75,6 +66,28 @@ Now that we have a git hook to automatically update the index.html.md we found i
 To do that we need to update the githook with some if logic.
 
 By getting the diff and then grepping those files for the pattern we can run the commit hook only when files we expect to cause changes in the index.html.md to be impacted. Now it should hopefully go really fast when I commit these things.
+
+> enter puzzle driven development
+
+To install pdd which will allow you to see if your puzzles will be created prior to pushing to origin. If you have malformed TODOs it can break pdd and cause it to do nothing and not tell you what is happening in the webhooks.
+
+/**
+ * @todo #1:30min Run serverside pdd as a github action so that I can better troubleshoot issues with puzzles not being created.
+ */
+
+```shell
+make init
+```
+
+This will install the pdd gem, and add it to bash profile so that you can run
+
+```shell
+pdd
+```
+
+to see what kind of puzzles will be created in github.
+
+found more documentation in the [pdd source code](https://github.com/yegor256/pdd).
 
 7. Approach to the Inmost Cave
 8. The Ordeal
