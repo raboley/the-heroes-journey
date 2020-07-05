@@ -24,6 +24,8 @@ We have language bindings in Shell, Ruby, Python, and JavaScript! You can view c
 
 This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
+@todo #17:30min Figure out how to center this document within it's pane so it isn't scewed left.
+
 <div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/3bb76760-6e9b-4405-bd06-0f20594a0c6c" id="mOfa7samMO-B"></iframe></div>
 
 # Script Examples in Documentation using Embedme
@@ -155,7 +157,9 @@ After it has been done the first time the github action should be able to succes
 
 # Diagrams embedded into Documentation using Lucidchart
 
-@todo #11:15mins Show process for embedding lucid charts into the slate document.
+@todo #17:15mins Create the problem, solution and example blocks.
+
+@todo #17:15mins Add screenshots (bonus points for gif) of how to add an embed link to this documentation.
 
 # Small Incremental changes with PDD
 
