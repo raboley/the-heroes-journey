@@ -106,7 +106,11 @@ The result of all that leaves us with an [./source/index.html.md](./source/index
 
 # Multiple Language Tab Options with Slate
 
-@todo #10:30mins Create documentation for what slate is, how to install it, run it locally, and view it published.
+@todo #10:15mins Document what slate is and installation process
+
+@todo #10:15mins Document how to run slate locally
+
+@todo #10:30mins Document how to publish slate to github pages
 
 # Diagrams embedded into Documentation using Lucidchart
 
