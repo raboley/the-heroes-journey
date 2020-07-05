@@ -161,7 +161,17 @@ Problem: High leven design charts quickly become out of date if they are hard co
 
 Solution: Lucid chart allows you to embed charts as html objects, and slate allows you to publish raw html leading to documentation always being up to date with source design charts.
 
-Example: Simply by going to lucid chart and creating a new document, then selecting embed you can get an embed html object like below:
+Example: Simply by going to lucid chart and creating a new document, then select embed and copy the embed url.
+
+![lucid_chart_embed_link_demo.gif](../docs/videos/lucid_chart_embed_link_demo.gif)
+
+> You can screen cap your screen on mac using
+>
+> `cmd + shift + 5`
+>
+> Which will generate a mov file. You can then convert that mov file to a gif using any online converting service. Finally link the gif with a relative path adding a ! before the url style link like above.
+
+you can get an embed html object like below:
 
 ```html
 <div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/e9f142be-ca5e-4177-8f14-36c544f655ca" id="phyaKTPhMxyz"></iframe></div>
@@ -173,7 +183,6 @@ Which will render a living document in slate like below:
 
 Now whenever that [source lucid chart](https://app.lucidchart.com/documents/edit/e9f142be-ca5e-4177-8f14-36c544f655ca/-gyaVl7tAo0L#?folder_id=home&browser=icon) is updated you will see it update here shortly after. No more repeat copy paste or stale diagrams
 
-@todo #17:15mins Add screenshots (bonus points for gif) of how to add an embed link to this documentation.
 
 # Small Incremental changes with PDD
 
