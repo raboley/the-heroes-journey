@@ -332,6 +332,17 @@
           </li>
           <li>
             <a href="#small-incremental-changes-with-pdd" class="toc-h1 toc-link" data-title="Small Incremental changes with PDD">Small Incremental changes with PDD</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#problem" class="toc-h2 toc-link" data-title="Problem">Problem</a>
+                  </li>
+                  <li>
+                    <a href="#solution" class="toc-h2 toc-link" data-title="Solution">Solution</a>
+                  </li>
+                  <li>
+                    <a href="#example" class="toc-h2 toc-link" data-title="Example">Example</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#generate-infrastructure-diagrams-from-terraform-with-cloudcraft" class="toc-h1 toc-link" data-title="Generate Infrastructure Diagrams from Terraform With CloudCraft">Generate Infrastructure Diagrams from Terraform With CloudCraft</a>
@@ -514,8 +525,35 @@ To add slate to your project the easist thing is to clone their repo, and start 
 <div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/e9f142be-ca5e-4177-8f14-36c544f655ca" id="phyaKTPhMxyz"></iframe></div>
 
 <p>Now whenever that <a href="https://app.lucidchart.com/documents/edit/e9f142be-ca5e-4177-8f14-36c544f655ca/-gyaVl7tAo0L#?folder_id=home&amp;browser=icon">source lucid chart</a> is updated you will see it update here shortly after. No more repeat copy paste or stale diagrams</p>
-<h1 id='small-incremental-changes-with-pdd'>Small Incremental changes with PDD</h1>
-<p>@todo #18:15mins Create the problem, solution and example for PDD.</p>
+<h1 id='small-incremental-changes-with-pdd'>Small Incremental changes with PDD</h1><h2 id='problem'>Problem</h2>
+<p>Features and improvemnts are really hard to fit into small chunks. PDD enables really small incremental improvements that should last for a very short amount of time. This combats the feeling that something we think will be easy and take an hour ends up requiring 3 weeks to fully complete. </p>
+<h2 id='solution'>Solution</h2>
+<p>With PDD you just spend the amount of time that the puzzle says to do, and do as much as possible then creating additional puzzles to fill in the gaps. Allowing things to be complete, even though it isn&#39;t 100% completed, but it is in a better state and closer to that 100% done. This allows people to get something done without spinning their wheels for days to get something added.</p>
+<h2 id='example'>Example</h2>
+<p>I can&#39;t do actual puzzle syntax in this, so I will use to-do and to make it a real puzzle you just have to remove the <code>-</code> from the to-do to make it real.</p>
+
+<blockquote>
+<p>an example would be something like this</p>
+
+<p>@to-do #[parent-issue]:[amount of time it should take]/[role that should complete this task] [description of the task]</p>
+
+<p>So for example the issue that created this documentation looked like this:</p>
+
+<p>@to-do #18:15mins Create the problem, solution and example for PDD.</p>
+
+<p>you can omit the role if you want, since I am doing all the work it is pointless for me.</p>
+</blockquote>
+
+<p>The important thing is to have an issue to link it to. So if you want to do something manually create an issue in github and then you can start chaining puzzles based on that issue. The idea being that once all child issues are closed automatically as puzzles you can close the manual github issue manually. If you spend 30 mins and find it isn&#39;t done yet, you can create another puzzle to finish the rest of it.</p>
+
+<blockquote>
+<p>@to-do #30:15mins Create movie to show how pdd examples work</p>
+</blockquote>
+
+<p>For this example it probably doesn&#39;t need a another issue, but if it did I could create a child issue from that to expand upon.
+So in this instance hte issue that was created by the original puzzle was #30 so my next puzzle could be something like:</p>
+
+<p>Then I would remove the original puzzle from source control because that was completed (the lines that describe #30 which would be <code>@to-do #18:15mins Create the problem, solution and example for PDD.</code>) and then move on and the next person can fix it as the next puzzle, but the original puzzle #30 would be closed by pdd.</p>
 
 <p>@todo #18:15mins How does PDD work? include reference to the pdd webinar.</p>
 
