@@ -191,7 +191,37 @@ Now whenever that [source lucid chart](https://app.lucidchart.com/documents/edit
 
 # Small Incremental changes with PDD
 
-@todo #18:15mins Create the problem, solution and example for PDD.
+## Problem
+
+Features and improvemnts are really hard to fit into small chunks. PDD enables really small incremental improvements that should last for a very short amount of time. This combats the feeling that something we think will be easy and take an hour ends up requiring 3 weeks to fully complete. 
+
+## Solution
+
+With PDD you just spend the amount of time that the puzzle says to do, and do as much as possible then creating additional puzzles to fill in the gaps. Allowing things to be complete, even though it isn't 100% completed, but it is in a better state and closer to that 100% done. This allows people to get something done without spinning their wheels for days to get something added.
+
+## Example
+
+I can't do actual puzzle syntax in this, so I will use to-do and to make it a real puzzle you just have to remove the `-` from the to-do to make it real.
+
+> an example would be something like this
+>
+> @to-do #[parent-issue]:[amount of time it should take]/[role that should complete this task] [description of the task]
+>
+> So for example the issue that created this documentation looked like this:
+>
+> @to-do #18:15mins Create the problem, solution and example for PDD.
+>
+> you can omit the role if you want, since I am doing all the work it is pointless for me.
+
+The important thing is to have an issue to link it to. So if you want to do something manually create an issue in github and then you can start chaining puzzles based on that issue. The idea being that once all child issues are closed automatically as puzzles you can close the manual github issue manually. If you spend 30 mins and find it isn't done yet, you can create another puzzle to finish the rest of it.
+
+> @to-do #30:15mins Create movie to show how pdd examples work
+
+For this example it probably doesn't need a another issue, but if it did I could create a child issue from that to expand upon.
+So in this instance hte issue that was created by the original puzzle was #30 so my next puzzle could be something like:
+
+
+Then I would remove the original puzzle from source control because that was completed (the lines that describe #30 which would be `@to-do #18:15mins Create the problem, solution and example for PDD.`) and then move on and the next person can fix it as the next puzzle, but the original puzzle #30 would be closed by pdd.
 
 @todo #18:15mins How does PDD work? include reference to the pdd webinar.
 
