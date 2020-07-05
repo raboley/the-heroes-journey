@@ -157,7 +157,21 @@ After it has been done the first time the github action should be able to succes
 
 # Diagrams embedded into Documentation using Lucidchart
 
-@todo #17:15mins Create the problem, solution and example blocks.
+Problem: High leven design charts quickly become out of date if they are hard coded into documentation as an image. They are also much less valuable if they only exist as a url.
+
+Solution: Lucid chart allows you to embed charts as html objects, and slate allows you to publish raw html leading to documentation always being up to date with source design charts.
+
+Example: Simply by going to lucid chart and creating a new document, then selecting embed you can get an embed html object like below:
+
+```html
+<div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/e9f142be-ca5e-4177-8f14-36c544f655ca" id="phyaKTPhMxyz"></iframe></div>
+```
+
+Which will render a living document in slate like below:
+
+<div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/e9f142be-ca5e-4177-8f14-36c544f655ca" id="phyaKTPhMxyz"></iframe></div>
+
+Now whenever that [source lucid chart](https://app.lucidchart.com/documents/edit/e9f142be-ca5e-4177-8f14-36c544f655ca/-gyaVl7tAo0L#?folder_id=home&browser=icon) is updated you will see it update here shortly after. No more repeat copy paste or stale diagrams
 
 @todo #17:15mins Add screenshots (bonus points for gif) of how to add an embed link to this documentation.
 
