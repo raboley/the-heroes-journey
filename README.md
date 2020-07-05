@@ -72,10 +72,6 @@ By getting the diff and then grepping those files for the pattern we can run the
 
 To install pdd which will allow you to see if your puzzles will be created prior to pushing to origin. If you have malformed puzzles it can break pdd and cause it to do nothing and not tell you what is happening in the webhooks.
 
-/**
- * @todo #1:30min/DEV Run serverside pdd as a github action so that I can better troubleshoot issues with puzzles not being created.
- */
-
 ```shell
 make init
 ```
