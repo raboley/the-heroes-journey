@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
   <head>
@@ -456,13 +457,26 @@ To add slate to your project the easist thing is to clone their repo, and start 
 
 <p>The GitHub action is configured in the [.github/workflows/deploy.yml] file. It will run the steps to publish this documentation to GitHub pages.</p>
 
-<p>@todo #23:30mins Make the publish branch work so that you can reach the slate url.</p>
-
 <p>The docs can be read from this github page</p>
 
-<p><a href="https://raboley.github.io/slate">https://raboley.github.io/slate</a></p>
+<p><a href="https://raboley.github.io/the-heroes-journey">https://raboley.github.io/the-heroes-journey</a></p>
 
-<p>your own github pages site will be published with this pattern if you use the same template <code>https://&lt;your-github-username&gt;.github.io/slate</code></p>
+<p>your own github pages site will be published with this pattern if you use the same template <code>https://&lt;your-github-username&gt;.github.io/&lt;github-repository-name&gt;</code></p>
+
+<blockquote>
+<p>Note: The first time you publish your github pages you have to manually do it from your laptop as an admin account.</p>
+</blockquote>
+
+<p>To publish your documentation to github pages run the deploy script</p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">.</span> deploy.sh
+</code></pre></div>
+<p>This will create a branch called gh-pages and publish the documentation static content to it. Then have github pages host that content.</p>
+
+<blockquote>
+<p>Note: Terminal exited 1 when I ran it first time, but it still worked anyways.</p>
+</blockquote>
+
+<p>After it has been done the first time the github action should be able to successfully publish your docs to your url.</p>
 <h1 id='diagrams-embedded-into-documentation-using-lucidchart'>Diagrams embedded into Documentation using Lucidchart</h1>
 <p>@todo #11:15mins Show process for embedding lucid charts into the slate document.</p>
 <h1 id='small-incremental-changes-with-pdd'>Small Incremental changes with PDD</h1>
