@@ -133,13 +133,25 @@ This repo is setup with a GitHub action that will do this automatically on `mast
 
 The GitHub action is configured in the [.github/workflows/deploy.yml] file. It will run the steps to publish this documentation to GitHub pages.
 
-@todo #23:30mins Make the publish branch work so that you can reach the slate url.
-
 The docs can be read from this github page
 
-[https://raboley.github.io/slate](https://raboley.github.io/slate)
+[https://raboley.github.io/the-heroes-journey](https://raboley.github.io/the-heroes-journey)
 
-your own github pages site will be published with this pattern if you use the same template `https://<your-github-username>.github.io/slate`
+your own github pages site will be published with this pattern if you use the same template `https://<your-github-username>.github.io/<github-repository-name>`
+
+> Note: The first time you publish your github pages you have to manually do it from your laptop as an admin account.
+
+To publish your documentation to github pages run the deploy script
+
+```shell
+. deploy.sh
+```
+
+This will create a branch called gh-pages and publish the documentation static content to it. Then have github pages host that content.
+
+> Note: Terminal exited 1 when I ran it first time, but it still worked anyways.
+
+After it has been done the first time the github action should be able to successfully publish your docs to your url.
 
 # Diagrams embedded into Documentation using Lucidchart
 
