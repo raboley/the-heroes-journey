@@ -1,1 +1,21 @@
 # @todo #7:30min Create a github workflow for pdd
+name: pdd
+
+on:
+  push:
+    branches: [ 'main' ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      ruby-version: 2.5
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ env.ruby-version }}
+    - run: make init
+
