@@ -24,9 +24,7 @@ We have language bindings in Shell, Ruby, Python, and JavaScript! You can view c
 
 This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
-@todo #17:30min Figure out how to center this document within it's pane so it isn't scewed left.
-
-<div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/3bb76760-6e9b-4405-bd06-0f20594a0c6c" id="mOfa7samMO-B"></iframe></div>
+<div style="width: 480px; height: 360px; margin: 30px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/3bb76760-6e9b-4405-bd06-0f20594a0c6c" id="mOfa7samMO-B"></iframe></div>
 
 # Script Examples in Documentation using Embedme
 
@@ -163,23 +161,29 @@ Solution: Lucid chart allows you to embed charts as html objects, and slate allo
 
 Example: Simply by going to lucid chart and creating a new document, then select embed and copy the embed url.
 
-@todo #24:15mins The link doesn't work when published to github pages. Should show gif not nothing.
-
-![lucid_chart_embed_link_demo.gif](../docs/videos/lucid_chart_embed_link_demo.gif)
-
-> You can screen cap your screen on mac using
+> To make a gif like this you can screen cap your screen on mac using
 >
 > `cmd + shift + 5`
 >
 > Which will generate a mov file. You can then convert that mov file to a gif using any online converting service. Finally link the gif with a relative path adding a ! before the url style link like above.
 
-you can get an embed html object like below:
+![lucid_chart_embed_link_demo.gif](https://github.com/raboley/the-heroes-journey/blob/master/docs/videos/lucid_chart_embed_link_demo.gif?raw=true)
+
+> The embed link in the video will look something like below:
 
 ```html
-<div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/e9f142be-ca5e-4177-8f14-36c544f655ca" id="phyaKTPhMxyz"></iframe></div>
+<div style="width: 480px; height: 360px; margin: 10px; position: relative;">
+  <iframe
+    allowfullscreen
+    frameborder="0"
+    style="width:480px; height:360px"
+    src="https://app.lucidchart.com/documents/embeddedchart/e9f142be-ca5e-4177-8f14-36c544f655ca"
+    id="phyaKTPhMxyz">
+  </iframe>
+</div>
 ```
 
-Which will render a living document in slate like below:
+> it can just be pasted anywhere outside of a code block to have it render the html and show the image.
 
 <div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/e9f142be-ca5e-4177-8f14-36c544f655ca" id="phyaKTPhMxyz"></iframe></div>
 
