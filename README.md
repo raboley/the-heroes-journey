@@ -86,6 +86,10 @@ This will install the pdd gem, and add it to bash profile so that you can run
 pdd
 ```
 
+/**
+ * @todo #4:15min/DEV Should maybe have a precommit hook as well?
+ */
+
 to see what kind of puzzles will be created in github.
 
 found more documentation in the [pdd source code](https://github.com/yegor256/pdd).
