@@ -125,6 +125,16 @@ This browser link happens using the [middleman](https://middlemanapp.com/basics/
 
 @todo #10:30mins Document how to publish slate to github pages
 
+## Deploying Your docs to Github Pages
+
+Once you have your slate docs working locally you can [publish them to GitHub Pages](https://github.com/slatedocs/slate/wiki/Deploying-Slate).
+
+This repo is setup with a GitHub action that will do this automatically on `master` branch.
+
+> if you use the slate repo as a template it will also have the github action setup to do so on `main` branch.
+
+The GitHub action is configured in the [.github/workflows/deploy.yml] file. It will run the steps to publish this documentation to GitHub pages.
+
 # Diagrams embedded into Documentation using Lucidchart
 
 @todo #11:15mins Show process for embedding lucid charts into the slate document.
