@@ -484,7 +484,19 @@ To add slate to your project the easist thing is to clone their repo, and start 
 
 <p>Solution: Lucid chart allows you to embed charts as html objects, and slate allows you to publish raw html leading to documentation always being up to date with source design charts.</p>
 
-<p>Example: Simply by going to lucid chart and creating a new document, then selecting embed you can get an embed html object like below:</p>
+<p>Example: Simply by going to lucid chart and creating a new document, then select embed and copy the embed url.</p>
+
+<p><img src="docs/videos/lucid_chart_embed_link_demo.gif" alt="lucid_chart_embed_link_demo.gif" /></p>
+
+<blockquote>
+<p>You can screen cap your screen on mac using</p>
+
+<p><code>cmd + shift + 5</code></p>
+
+<p>Which will generate a mov file. You can then convert that mov file to a gif using any online converting service. Finally link the gif with a relative path adding a ! before the url style link like above.</p>
+</blockquote>
+
+<p>you can get an embed html object like below:</p>
 <div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 480px; height: 360px; margin: 10px; position: relative;"</span><span class="nt">&gt;&lt;iframe</span> <span class="na">allowfullscreen</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">style=</span><span class="s">"width:480px; height:360px"</span> <span class="na">src=</span><span class="s">"https://app.lucidchart.com/documents/embeddedchart/e9f142be-ca5e-4177-8f14-36c544f655ca"</span> <span class="na">id=</span><span class="s">"phyaKTPhMxyz"</span><span class="nt">&gt;&lt;/iframe&gt;&lt;/div&gt;</span>
 </code></pre></div>
 <p>Which will render a living document in slate like below:</p>
@@ -492,8 +504,6 @@ To add slate to your project the easist thing is to clone their repo, and start 
 <div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/e9f142be-ca5e-4177-8f14-36c544f655ca" id="phyaKTPhMxyz"></iframe></div>
 
 <p>Now whenever that <a href="https://app.lucidchart.com/documents/edit/e9f142be-ca5e-4177-8f14-36c544f655ca/-gyaVl7tAo0L#?folder_id=home&amp;browser=icon">source lucid chart</a> is updated you will see it update here shortly after. No more repeat copy paste or stale diagrams</p>
-
-<p>@todo #17:15mins Add screenshots (bonus points for gif) of how to add an embed link to this documentation.</p>
 <h1 id='small-incremental-changes-with-pdd'>Small Incremental changes with PDD</h1>
 <p>@todo #12:60mins Describe PDD with links to talks, explain how to create puzzles, setup githooks locally, install pdd, and close puzzles with examples.</p>
 <h1 id='generate-infrastructure-diagrams-from-terraform-with-cloudcraft'>Generate Infrastructure Diagrams from Terraform With CloudCraft</h1>
