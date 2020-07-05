@@ -32,13 +32,23 @@ This example API documentation page was created with [Slate](https://github.com/
 
 # Multiple Language Tab Options with Slate
 
+@todo #10:30mins Create documentation for what slate is, how to install it, run it locally, and view it published.
+
 # Diagrams embedded into Documentation using Lucidchart
+
+@todo #11:15mins Show process for embedding lucid charts into the slate document.
 
 # Small Incremental changes with PDD
 
+@todo #12:60mins Describe PDD with links to talks, explain how to create puzzles, setup githooks locally, install pdd, and close puzzles with examples.
+
 # Generate Infrastructure Diagrams from Terraform With CloudCraft
 
+@todo #13:60mins Describe cloudcraft, create terraform files as an example, link the cloudcraft diagram to this somehow.
+
 # Execute Code Examples in Documentation with DREDD
+
+@todo #14:60mins Describe DREDD, install process, how to write a test in documentation, execute the tests and create a github action to run these tests.
 
 # Initialization
   
