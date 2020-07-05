@@ -123,8 +123,6 @@ To run slate locally simply run `make serve-docs` to serve the documents on your
 
 This browser link happens using the [middleman](https://middlemanapp.com/basics/install/) web server application. It will host the website using ruby runtime.
 
-@todo #10:30mins Document how to publish slate to github pages
-
 ## Deploying Your docs to Github Pages
 
 Once you have your slate docs working locally you can [publish them to GitHub Pages](https://github.com/slatedocs/slate/wiki/Deploying-Slate).
@@ -134,6 +132,14 @@ This repo is setup with a GitHub action that will do this automatically on `mast
 > if you use the slate repo as a template it will also have the github action setup to do so on `main` branch.
 
 The GitHub action is configured in the [.github/workflows/deploy.yml] file. It will run the steps to publish this documentation to GitHub pages.
+
+@todo #23:30mins Make the publish branch work so that you can reach the slate url.
+
+The docs can be read from this github page
+
+[https://raboley.github.io/slate](https://raboley.github.io/slate)
+
+your own github pages site will be published with this pattern if you use the same template `https://<your-github-username>.github.io/slate`
 
 # Diagrams embedded into Documentation using Lucidchart
 
