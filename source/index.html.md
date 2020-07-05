@@ -28,7 +28,81 @@ This example API documentation page was created with [Slate](https://github.com/
 
 # Script Examples in Documentation using Embedme
 
-@todo #9:30mins Create documentation for what embedme does with how to set it up and examples.
+Problem: I create documentation with code samples from scripts that become out of date as I update scripts but forget to update the overall documentation.
+
+Solution: embed script paths into script blocks and run embedme prior to commit so that it will populate script contents into the script blocks automatically keeping any script content up to date.
+This is run as a git pre-commit hook so that prior to a commit that impacts either the scripts directory, or the index.html.md file, embedme will run and update any urls then add the files and commit them.
+
+Example: script blocks need to have specific extensions for embedme to work. There are a lot of scriptblock extensions documented in the [README.md for embedme](https://github.com/zakhenry/embedme#multi-language). The [EmbedMe README.md](https://github.com/zakhenry/embedme#embedme) does a great job explaining how it works with a simple gif example at the top, but for an example used in this repo see below explaining how the pre-commit hook works.
+
+> Note that the path to the script needs to be absolute, or relative to the path of the script being injected. That is why the paths below are ../ because this file is in the source/ directory, and not the root so we need the scripts to be referenced one directory above.
+
+For this example I will purposely use shell, when it needs to be sh for embedme to work on shell scripts (so my example stays in tact). Below is a shell block with a reference to the file .pre-commit.sh and nothing else.
+
+```shell
+# ../.pre-commit.sh
+```
+
+After running embedme on this example **note I would have to change shell to sh for this to work, which can be seen in the next example.**
+
+```sh
+npx embedme ./source/index.html.md
+```
+
+Then the contents of the precommit script will automatically be updated in the script block like below.
+
+```sh
+# ../.pre-commit.sh
+
+source ~/.bash_profile
+# embedme pre-commit hook so that if some script or documentation 
+# was updated to include more scripts the documentation pages get updated
+. ./scripts/pre-commit-filter.sh ". scripts/embedme.sh; git add ./source/index.html.md"
+# Pdd pre-commit hook so that if there is going to a pdd issue it is caught prior to commit.
+. ./scripts/pdd-commit-hook.sh
+```
+
+This command is idempotent, so it can be run over and over again. This will allow us to update this script block automatically as the underlying scripts are updated. The next question is how do we make this happen automatically? Enter [githooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks).
+
+## Githook
+
+The embedme command gets right before commiting to ensure that the index.html.md file is always up to date. This is achieved through adding a git [pre-commit hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks). This is a script that is stored in the .git/hooks directory of your project and is not normally saved in source control. by naming the file `pre-commit` it tells git to run that script prior to commiting any code. In this repo we store the script in source control, and then create a [symlink](https://www.makeuseof.com/tag/what-is-a-symbolic-link-what-are-its-uses-makeuseof-explains/) during the `make init` command so that every person that uses this repo can have the same pre-commit hook without manual steps of creating it and putting it in the .git/hooks directory of their project.
+
+that causes the [.pre-commit.sh](.pre-commit.sh) script to get run every time a user commits their code to this repo.
+
+That script runs some more scripts in it, but we will focus on one.
+
+```sh
+# ../.pre-commit.sh
+
+source ~/.bash_profile
+# embedme pre-commit hook so that if some script or documentation 
+# was updated to include more scripts the documentation pages get updated
+. ./scripts/pre-commit-filter.sh ". scripts/embedme.sh; git add ./source/index.html.md"
+# Pdd pre-commit hook so that if there is going to a pdd issue it is caught prior to commit.
+. ./scripts/pdd-commit-hook.sh
+```
+
+The pre-commit-filter.sh script referenced above will run the commands passed to it only if it meets a given criteria. In this case it is if any of the staged files are in the /scripts directory, or are the [./source/index.html.md](./source/index.html.md) file.
+
+This is because the pre-commit hook using npx takes time to run, and we only want to run it if a file that could potentially be used in that as a reference is updated.
+
+Then the commands passed in are to run the embedme.sh script, and then add the new updated [./source/index.html.md](./source/index.html.md) that has been modified by the embedme command. 
+
+The embedme.sh script is very simple
+
+```sh
+# ../scripts/embedme.sh
+
+# testing the new filter
+npx embedme ./source/index.html.md
+```
+
+which just runs the command to embed source code in the [./source/index.html.md](./source/index.html.md) file.
+
+The git add is very important to do after that, otherwise it will update the file, but not commit it leaving the next change to be commited manually by the user.
+
+The result of all that leaves us with an [./source/index.html.md](./source/index.html.md) file that is always up to date with any code files that are embedded within it.
 
 # Multiple Language Tab Options with Slate
 
