@@ -26,6 +26,20 @@ This example API documentation page was created with [Slate](https://github.com/
 
 <div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/3bb76760-6e9b-4405-bd06-0f20594a0c6c" id="mOfa7samMO-B"></iframe></div>
 
+# Script Examples in Documentation using Embedme
+
+@todo #9:30mins Create documentation for what embedme does with how to set it up and examples.
+
+# Multiple Language Tab Options with Slate
+
+# Diagrams embedded into Documentation using Lucidchart
+
+# Small Incremental changes with PDD
+
+# Generate Infrastructure Diagrams from Terraform With CloudCraft
+
+# Execute Code Examples in Documentation with DREDD
+
 # Initialization
   
 ```sh
