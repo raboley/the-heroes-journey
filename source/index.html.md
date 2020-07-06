@@ -18,13 +18,15 @@ code_clipboard: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
-
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
+@todo #34:30mins Write a real introduction with getting started commands.
 
 <div style="width: 480px; height: 360px; margin: 30px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/3bb76760-6e9b-4405-bd06-0f20594a0c6c" id="mOfa7samMO-B"></iframe></div>
+
+@todo #34:30mins Create section explaining githook as a general concept, and then reference the other githook sections here.
+
+@todo #34:30mins Talk about the makefile as a general concept and reference how init, docs and serve-docs work.
+
+## General Repository Concepts
 
 # Script Examples in Documentation using Embedme
 
@@ -110,8 +112,7 @@ Problem: Code is complicated, and sometimes you have differnet languages, operat
 
 Solution: [Slate](https://github.com/slatedocs/slate) is web based documentation system that has a description pane and a code pane so that it is easy to follow code examples on the right hand side of the window, and more prose like descriptions in the middle with an easy to navigate table of contents on the left. It even has search functionality. The best thing about slate is you can embed code examples and allow users to select from different tabs based on what is needed for them. It also lets you embed html into the document, so more advanced constructs can be added such as embedding a live lucidchart into the documentation. All this allows for documentation to be live realtime, more easy to understand and navigate while all being written in an [extended markdown](https://github.com/slatedocs/slate/wiki/Markdown-Syntax) syntax.
 
-Installation: 
-To add slate to your project the easist thing is to clone their repo, and start modifying it to fit your project as described in their [getting started guide](https://github.com/slatedocs/slate/wiki/Using-Slate-Natively). Once you have a slate project setup or you have just downloaded a repo with slate that you want to work on locally, you can install dependencies depending on your OS, such as these [macOS dependency install instructions](https://github.com/slatedocs/slate/wiki/Using-Slate-Natively#installing-dependencies-on-macos)
+Installation: To add slate to your project the easist thing is to clone their repo, and start modifying it to fit your project as described in their [getting started guide](https://github.com/slatedocs/slate/wiki/Using-Slate-Natively). Once you have a slate project setup or you have just downloaded a repo with slate that you want to work on locally, you can install dependencies depending on your OS, such as these [macOS dependency install instructions](https://github.com/slatedocs/slate/wiki/Using-Slate-Natively#installing-dependencies-on-macos)
 
 after you have the dependencies installed you can run `make init` to install all the ruby gems needed for slate to run successfully. Under the hood it is just a `bundle install` command.
 
@@ -248,7 +249,17 @@ pdd --exclude=src/**/*.java --exclude=target/**/*
 
 Once it is installed and in your path you can run it from terminal. It will throw an error if you have incorrectly formatted puzzles, and show output of what would be created if you have all correctly formatted puzzles.
 
-@todo #18:30mins explain to setup the git hook for pdd
+## Githook
+
+> The commit hook command is pretty simple for now, but in the future if there were rules that needed to be added, or files excluded they would be added here.
+
+```shell
+# ../scripts/pdd-commit-hook.sh
+```
+
+Much like the embedme githook, in this repo there is a pdd githook. It will run pdd prior to committing to ensure that no one is committing malformed puzzles. If there is a malformed puzzle the commit will not go through until the puzzles are corrected.
+
+This githook is included in the .pre-commit.sh file that symlinked with the .git/hooks/pre-commit file so that this config can be stored in the repo. Once running `make init` it will set this symlink up for you.
 
 @todo #18:30mins explain how to setup the pdd git action in GitHub
 
