@@ -342,6 +342,12 @@
                   <li>
                     <a href="#example" class="toc-h2 toc-link" data-title="Example">Example</a>
                   </li>
+                  <li>
+                    <a href="#pdd-in-action" class="toc-h2 toc-link" data-title="PDD in action">PDD in action</a>
+                  </li>
+                  <li>
+                    <a href="#install-pdd-locally" class="toc-h2 toc-link" data-title="Install PDD locally">Install PDD locally</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -526,7 +532,7 @@ To add slate to your project the easist thing is to clone their repo, and start 
 
 <p>Now whenever that <a href="https://app.lucidchart.com/documents/edit/e9f142be-ca5e-4177-8f14-36c544f655ca/-gyaVl7tAo0L#?folder_id=home&amp;browser=icon">source lucid chart</a> is updated you will see it update here shortly after. No more repeat copy paste or stale diagrams</p>
 <h1 id='small-incremental-changes-with-pdd'>Small Incremental changes with PDD</h1><h2 id='problem'>Problem</h2>
-<p>Features and improvemnts are really hard to fit into small chunks. PDD enables really small incremental improvements that should last for a very short amount of time. This combats the feeling that something we think will be easy and take an hour ends up requiring 3 weeks to fully complete. </p>
+<p>Features and improvemnts are really hard to fit into small chunks. PDD enables really small incremental improvements that should last for a very short amount of time. This combats the feeling that something we think will be easy and take an hour ends up requiring 3 weeks to fully complete.</p>
 <h2 id='solution'>Solution</h2>
 <p>With PDD you just spend the amount of time that the puzzle says to do, and do as much as possible then creating additional puzzles to fill in the gaps. Allowing things to be complete, even though it isn&#39;t 100% completed, but it is in a better state and closer to that 100% done. This allows people to get something done without spinning their wheels for days to get something added.</p>
 <h2 id='example'>Example</h2>
@@ -554,12 +560,26 @@ To add slate to your project the easist thing is to clone their repo, and start 
 So in this instance hte issue that was created by the original puzzle was #30 so my next puzzle could be something like:</p>
 
 <p>Then I would remove the original puzzle from source control because that was completed (the lines that describe #30 which would be <code>@to-do #18:15mins Create the problem, solution and example for PDD.</code>) and then move on and the next person can fix it as the next puzzle, but the original puzzle #30 would be closed by pdd.</p>
+<h2 id='pdd-in-action'>PDD in action</h2>
+<blockquote>
+<p>Note: pdd does some string searching for the words to-do (remove the <code>-</code>) and if there is any instance of that word without proper tag formatting it will try to create a ticket based on it and break. Originally it wouldn&#39;t work because I had those words in code I didn&#39;t write so it was trying to create puzzles based on it and throwing an error and then just not doing anything. To fix that I did a find and replace for all instances of that word and ran pdd locally to confirm there were no errors.</p>
+</blockquote>
 
-<p>@todo #18:15mins How does PDD work? include reference to the pdd webinar.</p>
+<p>The best way to see and understand pdd is to <a href="https://www.yegor256.com/2017/04/05/pdd-in-action.html">watch the webinar</a> that explains it, and talks about 0pdd, the service that creates and closes issues in github based on puzzles left in documents.</p>
+<h2 id='install-pdd-locally'>Install PDD locally</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># ../scripts/install-pdd.sh</span>
+</code></pre></div>
+<p>There are two versions of <a href="https://github.com/yegor256/pdd">pdd</a>, <a href="https://github.com/yegor256/0pdd">0pdd</a> and <a href="https://github.com/yegor256/pdd">pdd</a>. <a href="https://github.com/yegor256/0pdd">0pdd</a> is the hosted version of pdd that we send git commit into to so that it can automatically create puzzles. Meanwhile pdd is the command line tool that you can run locally to verify which puzzles would be created by [0pdd](https://github.com/yegor256/0pdd. Installing <a href="https://github.com/yegor256/pdd">pdd</a> locally is pretty simple, it just consists of installing the gem and adding it to your path. This will happen automtaically using <code>make init</code>, but can be manually installed using install-pdd.sh script.</p>
 
-<p>@todo #18:30mins Show example workflow of PDD to create a puzzle, be lazy and create another puzzle to finish that.</p>
+<blockquote>
+<p>Note: you need to add the ruby gems bin to your path to make it work. The script will install it to your .bash_profile so if you are using zsh you will need to add it to your path manually.</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Run pdd against everything</span>
+pdd
 
-<p>@todo #18:30mins explain how to run PDD locally by installing it, talking about how you should be careful of the words to do when they are todgether.</p>
+<span class="c"># Run it but exclude some files</span>
+pdd <span class="nt">--exclude</span><span class="o">=</span>src/<span class="k">**</span>/<span class="k">*</span>.java <span class="nt">--exclude</span><span class="o">=</span>target/<span class="k">**</span>/<span class="k">*</span>
+</code></pre></div>
+<p>Once it is installed and in your path you can run it from terminal. It will throw an error if you have incorrectly formatted puzzles, and show output of what would be created if you have all correctly formatted puzzles.</p>
 
 <p>@todo #18:30mins explain to setup the git hook for pdd</p>
 
