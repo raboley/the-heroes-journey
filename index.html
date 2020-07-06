@@ -621,7 +621,11 @@ pdd <span class="nt">--exclude</span><span class="o">=</span>src/<span class="k"
 <p>Note: I had a lot of trouble getting it to work originally when following the instructions, but that is because there were all sorts of malformed puzzles in my code (that I didn&#39;t write). It should just work seemlessly as long as you don&#39;t have malformed puzzles. An issue is that in the webhook history it will return 200s whether the puzzles are all good, or malformed, so you won&#39;t have any idea that something is wrong until you run pdd locally.</p>
 </blockquote>
 <h1 id='generate-infrastructure-diagrams-from-terraform-with-cloudcraft'>Generate Infrastructure Diagrams from Terraform With CloudCraft</h1>
-<p>@todo #13:60mins Describe cloudcraft, create terraform files as an example, link the cloudcraft diagram to this somehow.</p>
+<p>CloudCraft allows you to design architecture as diagrams then generate TF files based on those designs. In addition it will also let you connect to your AWS subscription and generate diagrams based on live infrastructure which is interesting.</p>
+
+<p>I don&#39;t really feel like doing much more about this at this time since it only works for AWS. Also it outputs terragrunt files that provide one way to make the way I don&#39;t like doing terraform code less terrible. That way is when you have a folder for every environment in your tf repo, and then manually update each tf file in each folder as things progress between environments. I would much rather have one instance in it, and then have a pipeline dictate the different values that should be done per each environment.</p>
+
+<p>Seems like update to code via these diagrams would be a manual process, and be hard to maintain. It is a cool idea, but don&#39;t think it is worth exploring right now.</p>
 <h1 id='execute-code-examples-in-documentation-with-dredd'>Execute Code Examples in Documentation with DREDD</h1>
 <p>@todo #14:60mins Describe DREDD, install process, how to write a test in documentation, execute the tests and create a github action to run these tests.</p>
 <h1 id='initialization'>Initialization</h1><div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># ../scripts/embedme.sh</span>
