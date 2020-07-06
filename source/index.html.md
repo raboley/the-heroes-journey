@@ -275,8 +275,6 @@ It basically just gets ruby setup to the correct version then runs the pdd commi
 
 If it finds a malformed puzzle it will error, otherwise it will succeed the build. It doesn't create the issues in github, that is done via the webhook on commit.
 
-@todo #34:15mins Talk about the webhook that is setup with 0pdd.
-
 ## Webhook
 
 pdd is automated using a webhook which on every commit pushed to GitHub notifies 0pdd who then creates/closes issues based on puzzles left in the repository. It is a pretty simple implementation and works almost instantly. Just have follow the documentation posted on their [pdd in action page](https://www.yegor256.com/2017/04/05/pdd-in-action.html).
