@@ -401,6 +401,8 @@
 <p>@todo #34:30mins Create section explaining githook as a general concept, and then reference the other githook sections here.</p>
 
 <p>@todo #34:30mins Talk about the makefile as a general concept and reference how init, docs and serve-docs work.</p>
+
+<p>@todo #39:30mins Talk about how webhooks work as a general concept then link to the webhook for 0pdd.</p>
 <h2 id='general-repository-concepts'>General Repository Concepts</h2><h1 id='script-examples-in-documentation-using-embedme'>Script Examples in Documentation using Embedme</h1>
 <p>Problem: I create documentation with code samples from scripts that become out of date as I update scripts but forget to update the overall documentation.</p>
 
@@ -612,9 +614,13 @@ pdd <span class="nt">--exclude</span><span class="o">=</span>src/<span class="k"
 <p>It basically just gets ruby setup to the correct version then runs the pdd commit hook.</p>
 
 <p>If it finds a malformed puzzle it will error, otherwise it will succeed the build. It doesn&#39;t create the issues in github, that is done via the webhook on commit.</p>
+<h2 id='webhook'>Webhook</h2>
+<p>pdd is automated using a webhook which on every commit pushed to GitHub notifies 0pdd who then creates/closes issues based on puzzles left in the repository. It is a pretty simple implementation and works almost instantly. Just have follow the documentation posted on their <a href="https://www.yegor256.com/2017/04/05/pdd-in-action.html">pdd in action page</a>.</p>
 
-<p>@todo #34:15mins Talk about the webhook that is setup with 0pdd.</p>
-<h2 id='webhook'>Webhook</h2><h1 id='generate-infrastructure-diagrams-from-terraform-with-cloudcraft'>Generate Infrastructure Diagrams from Terraform With CloudCraft</h1>
+<blockquote>
+<p>Note: I had a lot of trouble getting it to work originally when following the instructions, but that is because there were all sorts of malformed puzzles in my code (that I didn&#39;t write). It should just work seemlessly as long as you don&#39;t have malformed puzzles. An issue is that in the webhook history it will return 200s whether the puzzles are all good, or malformed, so you won&#39;t have any idea that something is wrong until you run pdd locally.</p>
+</blockquote>
+<h1 id='generate-infrastructure-diagrams-from-terraform-with-cloudcraft'>Generate Infrastructure Diagrams from Terraform With CloudCraft</h1>
 <p>@todo #13:60mins Describe cloudcraft, create terraform files as an example, link the cloudcraft diagram to this somehow.</p>
 <h1 id='execute-code-examples-in-documentation-with-dredd'>Execute Code Examples in Documentation with DREDD</h1>
 <p>@todo #14:60mins Describe DREDD, install process, how to write a test in documentation, execute the tests and create a github action to run these tests.</p>
