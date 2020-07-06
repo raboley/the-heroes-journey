@@ -26,6 +26,8 @@ code_clipboard: true
 
 @todo #34:30mins Talk about the makefile as a general concept and reference how init, docs and serve-docs work.
 
+@todo #39:30mins Talk about how webhooks work as a general concept then link to the webhook for 0pdd.
+
 ## General Repository Concepts
 
 # Script Examples in Documentation using Embedme
@@ -276,6 +278,10 @@ If it finds a malformed puzzle it will error, otherwise it will succeed the buil
 @todo #34:15mins Talk about the webhook that is setup with 0pdd.
 
 ## Webhook
+
+pdd is automated using a webhook which on every commit pushed to GitHub notifies 0pdd who then creates/closes issues based on puzzles left in the repository. It is a pretty simple implementation and works almost instantly. Just have follow the documentation posted on their [pdd in action page](https://www.yegor256.com/2017/04/05/pdd-in-action.html).
+
+> Note: I had a lot of trouble getting it to work originally when following the instructions, but that is because there were all sorts of malformed puzzles in my code (that I didn't write). It should just work seemlessly as long as you don't have malformed puzzles. An issue is that in the webhook history it will return 200s whether the puzzles are all good, or malformed, so you won't have any idea that something is wrong until you run pdd locally.
 
 # Generate Infrastructure Diagrams from Terraform With CloudCraft
 
