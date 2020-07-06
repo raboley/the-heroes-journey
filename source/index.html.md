@@ -293,8 +293,6 @@ Seems like update to code via these diagrams would be a manual process, and be h
 
 @todo #14:60mins Describe DREDD, install process, how to write a test in documentation, execute the tests and create a github action to run these tests.
 
-@todo #20:60mins Explore go-slate and maybe it will make embedding godocs easier and not have quite so many dependencies to install ruby crap into the repo.
-
 # Initialization
   
 ```sh
@@ -304,6 +302,17 @@ Seems like update to code via these diagrams would be a manual process, and be h
 npx embedme ./source/index.html.md
 ```
 
+# GoSlate
+
+@todo #41:30mins Create goslate example code
+
+@todo #41:30mins document how to run goslate locally
+
+@todo #41:30mins publish goslate docs to github pages
+
+@todo #41:30mins Create github action to publish goslate docs to github pages
+
+@todo #41:15mins update the pre-commit hook to use goslate commands instead of ruby slate.
 
 There are a couple things that run locally to help with development of this repo.
 
