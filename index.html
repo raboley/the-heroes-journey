@@ -372,12 +372,15 @@
           </li>
           <li>
             <a href="#initialization" class="toc-h1 toc-link" data-title="Initialization">Initialization</a>
+          </li>
+          <li>
+            <a href="#gocli" class="toc-h1 toc-link" data-title="GoCli">GoCli</a>
+          </li>
+          <li>
+            <a href="#goslate" class="toc-h1 toc-link" data-title="GoSlate">GoSlate</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#up-to-date-scripts-with-embedme" class="toc-h2 toc-link" data-title="Up to date scripts with embedme">Up to date scripts with embedme</a>
-                  </li>
-                  <li>
-                    <a href="#quick-small-iterative-issues-with-pdd" class="toc-h2 toc-link" data-title="Quick, Small iterative issues with PDD">Quick, Small iterative issues with PDD</a>
+                    <a href="#installing-locally" class="toc-h2 toc-link" data-title="Installing locally">Installing locally</a>
                   </li>
               </ul>
           </li>
@@ -628,35 +631,35 @@ pdd <span class="nt">--exclude</span><span class="o">=</span>src/<span class="k"
 <p>Seems like update to code via these diagrams would be a manual process, and be hard to maintain. It is a cool idea, but don&#39;t think it is worth exploring right now.</p>
 <h1 id='execute-code-examples-in-documentation-with-dredd'>Execute Code Examples in Documentation with DREDD</h1>
 <p>@todo #14:60mins Describe DREDD, install process, how to write a test in documentation, execute the tests and create a github action to run these tests.</p>
-
-<p>@todo #20:60mins Explore go-slate and maybe it will make embedding godocs easier and not have quite so many dependencies to install ruby crap into the repo.</p>
 <h1 id='initialization'>Initialization</h1><div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># ../scripts/embedme.sh</span>
 
 <span class="c"># testing the new filter</span>
 npx embedme ./source/index.html.md
+</code></pre></div><h1 id='gocli'>GoCli</h1>
+<p>@todo #41:60mins Create a go cli tool that generates golang documentation via godocs. To make goslate be more useful I think it is important to figure out how to create a cli tool with go that generates documentation so that I can see if it really is a game changer, or if it will just be a different way to do the same thing I already do.</p>
+<h1 id='goslate'>GoSlate</h1>
+<p>@todo #41:30mins Create goslate example code</p>
+<h2 id='installing-locally'>Installing locally</h2>
+<p><a href="https://ahmadawais.com/install-go-lang-on-macos-with-homebrew/">install golang</a> ensuring you add it to your path.</p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>go get <span class="nt">-u</span> github.com/growler/go-slate
 </code></pre></div>
-<p>There are a couple things that run locally to help with development of this repo.</p>
-<h2 id='up-to-date-scripts-with-embedme'>Up to date scripts with embedme</h2><h2 id='quick-small-iterative-issues-with-pdd'>Quick, Small iterative issues with PDD</h2>
-<p>PDD is a style of development that breaks tasks down into small puzzles that can be created, at a high level then get the most basic lazy implementation added, leaving behind smaller todos called puzzles to finish the rest of the implementation.</p>
+<p>install goslate using <code>go get</code></p>
 
-<p>Puzzles can be added using tags, and running pdd locally will help debug if your puzzle tags are not correct.</p>
-<div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># ../scripts/install-pdd.sh</span>
+<p>go-slate assumes the following source tree:</p>
 
-gem <span class="nb">install </span>pdd
-<span class="c"># Adding ruby gems to the path if it doesn't exist already</span>
-<span class="k">if</span> <span class="o">!</span> <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$PATH</span><span class="s2">"</span> | <span class="nb">grep</span> <span class="nt">--quiet</span> <span class="s2">"/usr/local/lib/ruby/gems/2.7.0/bin"</span><span class="p">;</span> <span class="k">then
-    </span><span class="nb">echo</span> <span class="s2">"No ruby in path"</span>
-    <span class="k">if</span> <span class="o">!</span> <span class="nb">grep</span> <span class="nt">--quiet</span> <span class="s2">"/usr/local/lib/ruby/gems/2.7.0/bin"</span> ~/.bash_profile<span class="p">;</span> <span class="k">then
-        </span><span class="nb">echo</span> <span class="s2">"Adding ruby gems to profile"</span>
-        <span class="nb">echo export </span><span class="nv">PATH</span><span class="o">=</span><span class="s1">'"/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"'</span> <span class="o">&gt;&gt;</span> ~/.bash_profile
-        <span class="nb">echo</span> <span class="s1">'pdd has been installed and added to your path. Either restart your terminal or enter the command `source ~/.bash_profile`'</span>
-        <span class="nb">echo</span> <span class="s1">'then you can use `pdd` to see what the output of pdd will be when pushed to the server'</span>
-    <span class="k">fi
-fi</span>
-</code></pre></div>
-<p>will install pdd locally which can then be run in terminal with</p>
-<div class="highlight"><pre class="highlight sh tab-shell"><code>pdd
-</code></pre></div><h1 id='errors'>Errors</h1>
+<p>src
+    └── service
+        ├── main.go
+        └── apidoc</p>
+
+<p>@todo #41:30mins document how to run goslate locally</p>
+
+<p>@todo #41:30mins publish goslate docs to github pages</p>
+
+<p>@todo #41:30mins Create github action to publish goslate docs to github pages</p>
+
+<p>@todo #41:15mins update the pre-commit hook to use goslate commands instead of ruby slate.</p>
+<h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside>
