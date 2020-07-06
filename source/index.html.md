@@ -302,6 +302,10 @@ Seems like update to code via these diagrams would be a manual process, and be h
 npx embedme ./source/index.html.md
 ```
 
+# GoCli
+
+@todo #41:60mins Create a go cli tool that generates golang documentation via godocs. To make goslate be more useful I think it is important to figure out how to create a cli tool with go that generates documentation so that I can see if it really is a game changer, or if it will just be a different way to do the same thing I already do.
+
 # GoSlate
 
 @todo #41:30mins Create goslate example code
@@ -323,9 +327,6 @@ go-slate assumes the following source tree:
         ├── main.go
         └── apidoc
 
-
-
-
 @todo #41:30mins document how to run goslate locally
 
 @todo #41:30mins publish goslate docs to github pages
@@ -333,35 +334,3 @@ go-slate assumes the following source tree:
 @todo #41:30mins Create github action to publish goslate docs to github pages
 
 @todo #41:15mins update the pre-commit hook to use goslate commands instead of ruby slate.
-
-There are a couple things that run locally to help with development of this repo.
-
-## Up to date scripts with embedme
-
-## Quick, Small iterative issues with PDD
-
-PDD is a style of development that breaks tasks down into small puzzles that can be created, at a high level then get the most basic lazy implementation added, leaving behind smaller todos called puzzles to finish the rest of the implementation.
-
-Puzzles can be added using tags, and running pdd locally will help debug if your puzzle tags are not correct.
-
-```sh
-# ../scripts/install-pdd.sh
-
-gem install pdd
-# Adding ruby gems to the path if it doesn't exist already
-if ! echo "$PATH" | grep --quiet "/usr/local/lib/ruby/gems/2.7.0/bin"; then
-    echo "No ruby in path"
-    if ! grep --quiet "/usr/local/lib/ruby/gems/2.7.0/bin" ~/.bash_profile; then
-        echo "Adding ruby gems to profile"
-        echo export PATH='"/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"' >> ~/.bash_profile
-        echo 'pdd has been installed and added to your path. Either restart your terminal or enter the command `source ~/.bash_profile`'
-        echo 'then you can use `pdd` to see what the output of pdd will be when pushed to the server'
-    fi
-fi
-```
-
-will install pdd locally which can then be run in terminal with
-
-```sh
-pdd
-```
