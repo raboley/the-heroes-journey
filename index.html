@@ -307,6 +307,11 @@
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#general-repository-concepts" class="toc-h2 toc-link" data-title="General Repository Concepts">General Repository Concepts</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#script-examples-in-documentation-using-embedme" class="toc-h1 toc-link" data-title="Script Examples in Documentation using Embedme">Script Examples in Documentation using Embedme</a>
@@ -348,6 +353,9 @@
                   <li>
                     <a href="#install-pdd-locally" class="toc-h2 toc-link" data-title="Install PDD locally">Install PDD locally</a>
                   </li>
+                  <li>
+                    <a href="#githook-2" class="toc-h2 toc-link" data-title="Githook">Githook</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -380,14 +388,14 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+<p>@todo #34:30mins Write a real introduction with getting started commands.</p>
 
 <div style="width: 480px; height: 360px; margin: 30px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/3bb76760-6e9b-4405-bd06-0f20594a0c6c" id="mOfa7samMO-B"></iframe></div>
-<h1 id='script-examples-in-documentation-using-embedme'>Script Examples in Documentation using Embedme</h1>
+
+<p>@todo #34:30mins Create section explaining githook as a general concept, and then reference the other githook sections here.</p>
+
+<p>@todo #34:30mins Talk about the makefile as a general concept and reference how init, docs and serve-docs work.</p>
+<h2 id='general-repository-concepts'>General Repository Concepts</h2><h1 id='script-examples-in-documentation-using-embedme'>Script Examples in Documentation using Embedme</h1>
 <p>Problem: I create documentation with code samples from scripts that become out of date as I update scripts but forget to update the overall documentation.</p>
 
 <p>Solution: embed script paths into script blocks and run embedme prior to commit so that it will populate script contents into the script blocks automatically keeping any script content up to date.
@@ -453,8 +461,7 @@ npx embedme ./source/index.html.md
 
 <p>Solution: <a href="https://github.com/slatedocs/slate">Slate</a> is web based documentation system that has a description pane and a code pane so that it is easy to follow code examples on the right hand side of the window, and more prose like descriptions in the middle with an easy to navigate table of contents on the left. It even has search functionality. The best thing about slate is you can embed code examples and allow users to select from different tabs based on what is needed for them. It also lets you embed html into the document, so more advanced constructs can be added such as embedding a live lucidchart into the documentation. All this allows for documentation to be live realtime, more easy to understand and navigate while all being written in an <a href="https://github.com/slatedocs/slate/wiki/Markdown-Syntax">extended markdown</a> syntax.</p>
 
-<p>Installation: 
-To add slate to your project the easist thing is to clone their repo, and start modifying it to fit your project as described in their <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively">getting started guide</a>. Once you have a slate project setup or you have just downloaded a repo with slate that you want to work on locally, you can install dependencies depending on your OS, such as these <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively#installing-dependencies-on-macos">macOS dependency install instructions</a></p>
+<p>Installation: To add slate to your project the easist thing is to clone their repo, and start modifying it to fit your project as described in their <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively">getting started guide</a>. Once you have a slate project setup or you have just downloaded a repo with slate that you want to work on locally, you can install dependencies depending on your OS, such as these <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively#installing-dependencies-on-macos">macOS dependency install instructions</a></p>
 
 <p>after you have the dependencies installed you can run <code>make init</code> to install all the ruby gems needed for slate to run successfully. Under the hood it is just a <code>bundle install</code> command.</p>
 <h2 id='running-slate-locally'>Running Slate locally</h2>
@@ -580,8 +587,15 @@ pdd
 pdd <span class="nt">--exclude</span><span class="o">=</span>src/<span class="k">**</span>/<span class="k">*</span>.java <span class="nt">--exclude</span><span class="o">=</span>target/<span class="k">**</span>/<span class="k">*</span>
 </code></pre></div>
 <p>Once it is installed and in your path you can run it from terminal. It will throw an error if you have incorrectly formatted puzzles, and show output of what would be created if you have all correctly formatted puzzles.</p>
+<h2 id='githook-2'>Githook</h2>
+<blockquote>
+<p>The commit hook command is pretty simple for now, but in the future if there were rules that needed to be added, or files excluded they would be added here.</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># ../scripts/pdd-commit-hook.sh</span>
+</code></pre></div>
+<p>Much like the embedme githook, in this repo there is a pdd githook. It will run pdd prior to committing to ensure that no one is committing malformed puzzles. If there is a malformed puzzle the commit will not go through until the puzzles are corrected.</p>
 
-<p>@todo #18:30mins explain to setup the git hook for pdd</p>
+<p>This githook is included in the .pre-commit.sh file that symlinked with the .git/hooks/pre-commit file so that this config can be stored in the repo. Once running <code>make init</code> it will set this symlink up for you.</p>
 
 <p>@todo #18:30mins explain how to setup the pdd git action in GitHub</p>
 <h1 id='generate-infrastructure-diagrams-from-terraform-with-cloudcraft'>Generate Infrastructure Diagrams from Terraform With CloudCraft</h1>
