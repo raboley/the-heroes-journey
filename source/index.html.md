@@ -263,6 +263,20 @@ This githook is included in the .pre-commit.sh file that symlinked with the .git
 
 @todo #18:30mins explain how to setup the pdd git action in GitHub
 
+## GitHub Action
+
+It isn't required, but I setup a GitHub action to run pdd on each commit so that we can tell when malformed puzzle commands come through and cause an issue that is clear in the repository. The action just runs the pdd command to ensure it exits successfully.
+
+The action is located in [.github/workflows/pdd.yml](../.github/workflows/pdd.yml)
+
+It basically just gets ruby setup to the correct version then runs the pdd commit hook.
+
+If it finds a malformed puzzle it will error, otherwise it will succeed the build. It doesn't create the issues in github, that is done via the webhook on commit.
+
+@todo #34:15mins Talk about the webhook that is setup with 0pdd.
+
+## Webhook
+
 # Generate Infrastructure Diagrams from Terraform With CloudCraft
 
 @todo #13:60mins Describe cloudcraft, create terraform files as an example, link the cloudcraft diagram to this somehow.

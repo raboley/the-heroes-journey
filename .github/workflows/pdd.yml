@@ -17,5 +17,5 @@ jobs:
       with:
         ruby-version: ${{ env.ruby-version }}
     - run: make init
-    - run: pdd
+    - run: . ./scripts/pdd-commit-hook.sh
 
