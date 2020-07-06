@@ -306,6 +306,23 @@ npx embedme ./source/index.html.md
 
 @todo #41:30mins Create goslate example code
 
+## Installing locally
+
+[install golang](https://ahmadawais.com/install-go-lang-on-macos-with-homebrew/) ensuring you add it to your path.
+
+```shell
+go get -u github.com/growler/go-slate
+```
+
+install goslate using `go get`
+
+go-slate assumes the following source tree:
+
+    src
+    └── service
+        ├── main.go
+        └── apidoc
+
 @todo #41:30mins document how to run goslate locally
 
 @todo #41:30mins publish goslate docs to github pages
