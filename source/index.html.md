@@ -193,7 +193,7 @@ Now whenever that [source lucid chart](https://app.lucidchart.com/documents/edit
 
 ## Problem
 
-Features and improvemnts are really hard to fit into small chunks. PDD enables really small incremental improvements that should last for a very short amount of time. This combats the feeling that something we think will be easy and take an hour ends up requiring 3 weeks to fully complete. 
+Features and improvemnts are really hard to fit into small chunks. PDD enables really small incremental improvements that should last for a very short amount of time. This combats the feeling that something we think will be easy and take an hour ends up requiring 3 weeks to fully complete.
 
 ## Solution
 
@@ -220,14 +220,33 @@ The important thing is to have an issue to link it to. So if you want to do some
 For this example it probably doesn't need a another issue, but if it did I could create a child issue from that to expand upon.
 So in this instance hte issue that was created by the original puzzle was #30 so my next puzzle could be something like:
 
-
 Then I would remove the original puzzle from source control because that was completed (the lines that describe #30 which would be `@to-do #18:15mins Create the problem, solution and example for PDD.`) and then move on and the next person can fix it as the next puzzle, but the original puzzle #30 would be closed by pdd.
 
-@todo #18:15mins How does PDD work? include reference to the pdd webinar.
+## PDD in action
 
-@todo #18:30mins Show example workflow of PDD to create a puzzle, be lazy and create another puzzle to finish that.
+> Note: pdd does some string searching for the words to-do (remove the `-`) and if there is any instance of that word without proper tag formatting it will try to create a ticket based on it and break. Originally it wouldn't work because I had those words in code I didn't write so it was trying to create puzzles based on it and throwing an error and then just not doing anything. To fix that I did a find and replace for all instances of that word and ran pdd locally to confirm there were no errors.
 
-@todo #18:30mins explain how to run PDD locally by installing it, talking about how you should be careful of the words to do when they are todgether.
+The best way to see and understand pdd is to [watch the webinar](https://www.yegor256.com/2017/04/05/pdd-in-action.html) that explains it, and talks about 0pdd, the service that creates and closes issues in github based on puzzles left in documents.
+
+## Install PDD locally
+
+```shell
+# ../scripts/install-pdd.sh
+```
+
+There are two versions of [pdd](https://github.com/yegor256/pdd), [0pdd](https://github.com/yegor256/0pdd) and [pdd](https://github.com/yegor256/pdd). [0pdd](https://github.com/yegor256/0pdd) is the hosted version of pdd that we send git commit into to so that it can automatically create puzzles. Meanwhile pdd is the command line tool that you can run locally to verify which puzzles would be created by [0pdd](https://github.com/yegor256/0pdd. Installing [pdd](https://github.com/yegor256/pdd) locally is pretty simple, it just consists of installing the gem and adding it to your path. This will happen automtaically using `make init`, but can be manually installed using install-pdd.sh script.
+
+> Note: you need to add the ruby gems bin to your path to make it work. The script will install it to your .bash_profile so if you are using zsh you will need to add it to your path manually.
+
+```shell
+# Run pdd against everything
+pdd
+
+# Run it but exclude some files
+pdd --exclude=src/**/*.java --exclude=target/**/*
+```
+
+Once it is installed and in your path you can run it from terminal. It will throw an error if you have incorrectly formatted puzzles, and show output of what would be created if you have all correctly formatted puzzles.
 
 @todo #18:30mins explain to setup the git hook for pdd
 
