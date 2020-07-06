@@ -283,7 +283,11 @@ pdd is automated using a webhook which on every commit pushed to GitHub notifies
 
 # Generate Infrastructure Diagrams from Terraform With CloudCraft
 
-@todo #13:60mins Describe cloudcraft, create terraform files as an example, link the cloudcraft diagram to this somehow.
+CloudCraft allows you to design architecture as diagrams then generate TF files based on those designs. In addition it will also let you connect to your AWS subscription and generate diagrams based on live infrastructure which is interesting.
+
+I don't really feel like doing much more about this at this time since it only works for AWS. Also it outputs terragrunt files that provide one way to make the way I don't like doing terraform code less terrible. That way is when you have a folder for every environment in your tf repo, and then manually update each tf file in each folder as things progress between environments. I would much rather have one instance in it, and then have a pipeline dictate the different values that should be done per each environment.
+
+Seems like update to code via these diagrams would be a manual process, and be hard to maintain. It is a cool idea, but don't think it is worth exploring right now.
 
 # Execute Code Examples in Documentation with DREDD
 
