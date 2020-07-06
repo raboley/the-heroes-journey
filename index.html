@@ -356,6 +356,12 @@
                   <li>
                     <a href="#githook-2" class="toc-h2 toc-link" data-title="Githook">Githook</a>
                   </li>
+                  <li>
+                    <a href="#github-action" class="toc-h2 toc-link" data-title="GitHub Action">GitHub Action</a>
+                  </li>
+                  <li>
+                    <a href="#webhook" class="toc-h2 toc-link" data-title="Webhook">Webhook</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -598,7 +604,17 @@ pdd <span class="nt">--exclude</span><span class="o">=</span>src/<span class="k"
 <p>This githook is included in the .pre-commit.sh file that symlinked with the .git/hooks/pre-commit file so that this config can be stored in the repo. Once running <code>make init</code> it will set this symlink up for you.</p>
 
 <p>@todo #18:30mins explain how to setup the pdd git action in GitHub</p>
-<h1 id='generate-infrastructure-diagrams-from-terraform-with-cloudcraft'>Generate Infrastructure Diagrams from Terraform With CloudCraft</h1>
+<h2 id='github-action'>GitHub Action</h2>
+<p>It isn&#39;t required, but I setup a GitHub action to run pdd on each commit so that we can tell when malformed puzzle commands come through and cause an issue that is clear in the repository. The action just runs the pdd command to ensure it exits successfully.</p>
+
+<p>The action is located in <a href="../.github/workflows/pdd.yml">.github/workflows/pdd.yml</a></p>
+
+<p>It basically just gets ruby setup to the correct version then runs the pdd commit hook.</p>
+
+<p>If it finds a malformed puzzle it will error, otherwise it will succeed the build. It doesn&#39;t create the issues in github, that is done via the webhook on commit.</p>
+
+<p>@todo #34:15mins Talk about the webhook that is setup with 0pdd.</p>
+<h2 id='webhook'>Webhook</h2><h1 id='generate-infrastructure-diagrams-from-terraform-with-cloudcraft'>Generate Infrastructure Diagrams from Terraform With CloudCraft</h1>
 <p>@todo #13:60mins Describe cloudcraft, create terraform files as an example, link the cloudcraft diagram to this somehow.</p>
 <h1 id='execute-code-examples-in-documentation-with-dredd'>Execute Code Examples in Documentation with DREDD</h1>
 <p>@todo #14:60mins Describe DREDD, install process, how to write a test in documentation, execute the tests and create a github action to run these tests.</p>
