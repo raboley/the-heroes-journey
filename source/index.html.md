@@ -293,6 +293,8 @@ Seems like update to code via these diagrams would be a manual process, and be h
 
 @todo #14:60mins Describe DREDD, install process, how to write a test in documentation, execute the tests and create a github action to run these tests.
 
+@todo #20:60mins Explore go-slate and maybe it will make embedding godocs easier and not have quite so many dependencies to install ruby crap into the repo.
+
 # Initialization
   
 ```sh
