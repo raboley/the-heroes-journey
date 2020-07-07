@@ -95,9 +95,9 @@ There are two githooks in this project, more info can be seen in those sections
 * [embedme](#githook-embedme)
 * [pdd](#githook-pdd)
 
-## General Repository Concepts
-
 # EmbedMe - Auto-Updating script block documentation
+
+EmbedMe allows one to keep documentation in script blocks up to date.
 
 ## Problem It Solves
 
@@ -133,7 +133,6 @@ npx embedme ./source/index.html.md
 ```
 
 > Then the contents of the precommit script will automatically be updated in the script block like below.
-
 
 ```sh
 # ../.pre-commit.sh
@@ -181,7 +180,7 @@ The pre-commit-filter.sh script referenced above will run the commands passed to
 
 This is because the pre-commit hook using npx takes time to run, and we only want to run it if a file that could potentially be used in that as a reference is updated.
 
-Then the commands passed in are to run the embedme.sh script, and then add the new updated [./source/index.html.md](./source/index.html.md) that has been modified by the embedme command. 
+Then the commands passed in are to run the embedme.sh script, and then add the new updated [./source/index.html.md](./source/index.html.md) that has been modified by the embedme command.
 
 The embedme.sh script is very simple
 
@@ -200,17 +199,35 @@ The git add is very important to do after that, otherwise it will update the fil
 
 The result of all that leaves us with an [./source/index.html.md](./source/index.html.md) file that is always up to date with any code files that are embedded within it.
 
-# Multiple Language Tab Options with Slate
+# Slate - Dynamic Docs With Language Tabs
 
-Problem: Code is complicated, and sometimes you have differnet languages, operating systems or frameworks to deal with and normal markdown just isn't enough. There needs to be an easier to navigate documentation system that allows for langauge tabs and more dynamic documentation styles.
+## Problem
 
-Solution: [Slate](https://github.com/slatedocs/slate) is web based documentation system that has a description pane and a code pane so that it is easy to follow code examples on the right hand side of the window, and more prose like descriptions in the middle with an easy to navigate table of contents on the left. It even has search functionality. The best thing about slate is you can embed code examples and allow users to select from different tabs based on what is needed for them. It also lets you embed html into the document, so more advanced constructs can be added such as embedding a live lucidchart into the documentation. All this allows for documentation to be live realtime, more easy to understand and navigate while all being written in an [extended markdown](https://github.com/slatedocs/slate/wiki/Markdown-Syntax) syntax.
+Code is complicated, and sometimes you have differnet languages, operating systems or frameworks to deal with and normal markdown just isn't enough. There needs to be an easier to navigate documentation system that allows for langauge tabs and more dynamic documentation styles.
 
-Installation: To add slate to your project the easist thing is to clone their repo, and start modifying it to fit your project as described in their [getting started guide](https://github.com/slatedocs/slate/wiki/Using-Slate-Natively). Once you have a slate project setup or you have just downloaded a repo with slate that you want to work on locally, you can install dependencies depending on your OS, such as these [macOS dependency install instructions](https://github.com/slatedocs/slate/wiki/Using-Slate-Natively#installing-dependencies-on-macos)
+## Solution
+
+[Slate](https://github.com/slatedocs/slate) is web based documentation system that has a description pane and a code pane so that it is easy to follow code examples on the right hand side of the window, and more prose like descriptions in the middle with an easy to navigate table of contents on the left. It even has search functionality. The best thing about slate is you can embed code examples and allow users to select from different tabs based on what is needed for them. It also lets you embed html into the document, so more advanced constructs can be added such as embedding a live lucidchart into the documentation. All this allows for documentation to be live realtime, more easy to understand and navigate while all being written in an [extended markdown](https://github.com/slatedocs/slate/wiki/Markdown-Syntax) syntax.
+
+## Installation
+
+```shell
+make init
+```
+
+To add slate to your project the easist thing is to clone their repo, and start modifying it to fit your project as described in their [getting started guide](https://github.com/slatedocs/slate/wiki/Using-Slate-Natively). Once you have a slate project setup or you have just downloaded a repo with slate that you want to work on locally, you can install dependencies depending on your OS, such as these [macOS dependency install instructions](https://github.com/slatedocs/slate/wiki/Using-Slate-Natively#installing-dependencies-on-macos)
 
 after you have the dependencies installed you can run `make init` to install all the ruby gems needed for slate to run successfully. Under the hood it is just a `bundle install` command.
 
 ## Running Slate locally
+
+> Run slate locally
+
+```shell
+make serve-docs
+```
+
+> Open [http://192.168.0.49:4567](http://192.168.0.49:4567) in browsers
 
 To run slate locally simply run `make serve-docs` to serve the documents on your localhost. then you can go to [http://192.168.0.49:4567](http://192.168.0.49:4567) to view your documents locally. The nice thing is as long as the process is running you can make updates to this document and then refresh the browser to see the effects.
 
@@ -219,6 +236,14 @@ To run slate locally simply run `make serve-docs` to serve the documents on your
 This browser link happens using the [middleman](https://middlemanapp.com/basics/install/) web server application. It will host the website using ruby runtime.
 
 ## Deploying Your docs to Github Pages
+
+> deploy to github pages use
+
+```shell
+. ../deploy.sh
+```
+
+> or just commit to master branch
 
 Once you have your slate docs working locally you can [publish them to GitHub Pages](https://github.com/slatedocs/slate/wiki/Deploying-Slate).
 
@@ -247,6 +272,8 @@ This will create a branch called gh-pages and publish the documentation static c
 > Note: Terminal exited 1 when I ran it first time, but it still worked anyways.
 
 After it has been done the first time the github action should be able to successfully publish your docs to your url.
+
+@todo #48:30mins Clean up the lucid chart section of the documentation
 
 # Diagrams embedded into Documentation using Lucidchart
 
