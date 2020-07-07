@@ -13,28 +13,41 @@ this will include:
 * ?generate diagrams for infrastructure from terraform code ([cloudCraft](https://medium.com/faun/modules-tf-convert-visual-aws-diagram-into-terraform-configurations-e61fb0574b10))
 * Execute examples in documentation to test for accuracy ([dredd](https://rollout.io/blog/testing-code-examples-in-documentation/)) ([official](https://dredd.org/en/latest/))
 
-
+* Objective: Clear and up to date documentation
+* Obstacle: lots of developers and languages as part of their team
+* Outcome: Documentation automation makes all developers become documenters and Reid ends up becoming a developer
 
 ## ACT 1
 
-1. The Ordinary World
+@todo #51:60mins Write the outline to the story.
 
-In the beginning there was only text. Documentation was akin to only what could be produced using notepad. The humble README lived to serve with his only tool of raw text.
+### 1. The Ordinary World
+
+* Reid Me introduced. Has a terminal. Understands markdown, git and embedding code blocks. Reid's team makes a pipeline tool that lots of developers use.
+
+In the beginning there was only text. The humble README lived to serve with his only tool of raw text.
 He produced documentation in flat text form for developers around the world to read and everything was good.
 
 2. The Call of Adventure
+
+* Weeks go by and developers make tons of changes that Reid has to keep up to date as their technical writer. He can't keep up and a developer complains that a set of instructions is out of date and documentation is unclear.
 
 As time went on applications became more complex, and README began etching more and more text describing these systems. Soon developers around the world got tired of the flat documents README produced and wanted something more dynamic and easier to understand.
 
 3. Refusal of the Call
 
+* Reid refuses to make windows instructions because he thinks that it makes his documentation too complicated, and he doesn't have time for it.
 
 4. Meeting the Mentor
+
+* Enter Ruby who drove documentation pratices at big g corp, a worldwide organization that is known for highly skilled engineers. She fixes some problem he was working on that would take a day, in like 10 minutes so he has time.
 
 One day a woman named Ruby entered README's office. Ruby had a red romper that seemed to move as wind brushed against her sides. She looked at the documents README produced and looked perplexed.
 She brings him a stone slate.
 
 5. Crossing the First Threshold
+
+* He talks about the problem the developer brought to him that he needed a better way to show different types of documentation so users of his tools can get working right away. She shows him slate, and he enters the new world of web based documentation.
 
 Looking at the slate he can see an entire world inside it.
 
@@ -43,55 +56,9 @@ Looking at the slate he can see an entire world inside it.
 On the stone slate there are words etched into it face.
 
 ```shell
-bundle exec middleman server
+make serve-docs
 ```
 
 README runs his fingers across the words and in the crevices light begins to erupt and cause the tablet to shift into the symbols:
 
 [http://192.168.0.49:4567](http://192.168.0.49:4567)
-
-## ACT 2
-
-6. Tests, Allies, Enemies
-
-Time and Help enter as enemies to README, time causing his documentation to become out of date due to Help adding features and not updating documentation.
-
-Coming across embedme he found that the steps written as scripts could now be embedded into his documents automatically. simply by runing `npx embedme ./source/index.html.md` he was able to pull the contents from his scripts and embed them in the file automatically allowing for every step to be captured in a way that requires setup steps to work.
-
-He later found make who helped him even further strengthen his resolve. By using `make docs` he was able to run all the steps required to generate the documentation in a way that was repeatable. Now if only this step could also be run automatically when Help added new features.
-
-> enter git commit hooks
-
-Now that we have a git hook to automatically update the index.html.md we found it slowed down the commit process, so we only wanted to run it if the scripts directory or index.html.md file were modified.
-
-To do that we need to update the githook with some if logic.
-
-By getting the diff and then grepping those files for the pattern we can run the commit hook only when files we expect to cause changes in the index.html.md to be impacted. Now it should hopefully go really fast when I commit these things.
-
-> enter puzzle driven development
-
-To install pdd which will allow you to see if your puzzles will be created prior to pushing to origin. If you have malformed puzzles it can break pdd and cause it to do nothing and not tell you what is happening in the webhooks.
-
-```shell
-make init
-```
-
-This will install the pdd gem, and add it to bash profile so that you can run
-
-```shell
-pdd
-```
-
-to see what kind of puzzles will be created in github.
-
-found more documentation in the [pdd source code](https://github.com/yegor256/pdd).
-
-7. Approach to the Inmost Cave
-8. The Ordeal
-9. Reward (Seizing the Sword)
-
-## ACT 3
-
-10. The Road Back
-11. Resurrection
-12. Return with the Elixir

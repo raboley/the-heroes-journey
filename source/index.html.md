@@ -16,7 +16,80 @@ search: true
 code_clipboard: true
 ---
 
-# Introduction
+# The Heroes Journey
+
+## ACT 2
+
+### 6. Tests, Allies, Enemies
+
+* Tests -> big G allows you to go and meet people.
+* Outcomes
+* Embedme (Meet dee help him embed script contents)
+* Lucid Chart embed (Lucy shows him how to )
+* maybe godocs? if I can get it to work
+* Mr. Hook teaches git hooks
+* Peggy teaches pdd?
+
+Time and Help enter as enemies to README, time causing his documentation to become out of date due to Help adding features and not updating documentation.
+
+Coming across embedme he found that the steps written as scripts could now be embedded into his documents automatically. simply by runing `npx embedme ./source/index.html.md` he was able to pull the contents from his scripts and embed them in the file automatically allowing for every step to be captured in a way that requires setup steps to work.
+
+He later found make who helped him even further strengthen his resolve. By using `make docs` he was able to run all the steps required to generate the documentation in a way that was repeatable. Now if only this step could also be run automatically when Help added new features.
+
+> enter git commit hooks
+
+Now that we have a git hook to automatically update the index.html.md we found it slowed down the commit process, so we only wanted to run it if the scripts directory or index.html.md file were modified.
+
+To do that we need to update the githook with some if logic.
+
+By getting the diff and then grepping those files for the pattern we can run the commit hook only when files we expect to cause changes in the index.html.md to be impacted. Now it should hopefully go really fast when I commit these things.
+
+> enter puzzle driven development
+
+To install pdd which will allow you to see if your puzzles will be created prior to pushing to origin. If you have malformed puzzles it can break pdd and cause it to do nothing and not tell you what is happening in the webhooks.
+
+```shell
+make init
+```
+
+This will install the pdd gem, and add it to bash profile so that you can run
+
+```shell
+pdd
+```
+
+to see what kind of puzzles will be created in github.
+
+found more documentation in the [pdd source code](https://github.com/yegor256/pdd).
+
+### 7. Approach to the Inmost Cave
+
+* Reid confronts the fact that he can't do it all, and needs to convince others to pitch in their daily work at the risk of eliminating his part of the team. Doesn't have self confidence to code.
+
+
+### 8. The Ordeal
+
+* Reid tries to write code and makes a small cli tool after failing.
+
+### 9. Reward (Seizing the Sword)
+
+* Reid is able to make a cli tool and teach someone else how to use it using godocs.
+
+## ACT 3
+
+### 10. The Road Back
+
+* Reid goes back to the ordinary world and tries to teach their team how to add documentation and gets rejected.
+
+### 11. Resurrection
+
+* Reid refuses to document anymore and asks the developers to document their changes explaining the tools he learned.
+
+### 12. Return with the Elixir
+
+* Reid's team takes his advice and teaches him to be a developer.
+
+# v Special Features v
 
 @todo #34:30mins Write a real introduction with getting started commands.
 
@@ -317,11 +390,11 @@ Now whenever that [source lucid chart](https://app.lucidchart.com/documents/edit
 
 @todo #48:15mins Clean up PDD section of documentation
 
-# Small Incremental changes with PDD
+# PDD - Tiny Incremental Changes Through Puzzles
 
 ## Problem
 
-Features and improvemnts are really hard to fit into small chunks. PDD enables really small incremental improvements that should last for a very short amount of time. This combats the feeling that something we think will be easy and take an hour ends up requiring 3 weeks to fully complete.
+Features and improvemnts are really hard to fit into small chunks. Puzzle Driven Development ([pdd](https://github.com/yegor256/pdd)) enables really small incremental improvements that should last for a very short amount of time. This makes changes happen fast, and if branches are used it will be super short lived branches.
 
 ## Solution
 
@@ -352,17 +425,17 @@ Then I would remove the original puzzle from source control because that was com
 
 ## PDD in action
 
-> Note: pdd does some string searching for the words to-do (remove the `-`) and if there is any instance of that word without proper tag formatting it will try to create a ticket based on it and break. Originally it wouldn't work because I had those words in code I didn't write so it was trying to create puzzles based on it and throwing an error and then just not doing anything. To fix that I did a find and replace for all instances of that word and ran pdd locally to confirm there were no errors.
+> Note: don't leave any to do's in your code that aren't puzzles. it will screw pdd up.
 
-The best way to see and understand pdd is to [watch the webinar](https://www.yegor256.com/2017/04/05/pdd-in-action.html) that explains it, and talks about 0pdd, the service that creates and closes issues in github based on puzzles left in documents.
+pdd does some string searching for the words to-do (remove the `-`) and if there is any instance of that word without proper tag formatting it will try to create a ticket based on it and break. Originally it wouldn't work because I had those words in code I didn't write so it was trying to create puzzles based on it and throwing an error and then just not doing anything. To fix that I did a find and replace for all instances of that word and ran pdd locally to confirm there were no errors.
 
 ## Install PDD locally
 
-```shell
-# ../scripts/install-pdd.sh
-```
+> install pdd
 
-There are two versions of [pdd](https://github.com/yegor256/pdd), [0pdd](https://github.com/yegor256/0pdd) and [pdd](https://github.com/yegor256/pdd). [0pdd](https://github.com/yegor256/0pdd) is the hosted version of pdd that we send git commit into to so that it can automatically create puzzles. Meanwhile pdd is the command line tool that you can run locally to verify which puzzles would be created by [0pdd](https://github.com/yegor256/0pdd. Installing [pdd](https://github.com/yegor256/pdd) locally is pretty simple, it just consists of installing the gem and adding it to your path. This will happen automtaically using `make init`, but can be manually installed using install-pdd.sh script.
+```shell
+make init
+```
 
 > Note: you need to add the ruby gems bin to your path to make it work. The script will install it to your .bash_profile so if you are using zsh you will need to add it to your path manually.
 
@@ -374,14 +447,19 @@ pdd
 pdd --exclude=src/**/*.java --exclude=target/**/*
 ```
 
+There are two versions of [pdd](https://github.com/yegor256/pdd), [0pdd](https://github.com/yegor256/0pdd) and [pdd](https://github.com/yegor256/pdd). [0pdd](https://github.com/yegor256/0pdd) is the hosted version of pdd that we send git commit into to so that it can automatically create puzzles. Meanwhile pdd is the command line tool that you can run locally to verify which puzzles would be created by [0pdd](https://github.com/yegor256/0pdd. Installing [pdd](https://github.com/yegor256/pdd) locally is pretty simple, it just consists of installing the gem and adding it to your path. This will happen automtaically using `make init`, but can be manually installed using install-pdd.sh script.
+
+
 Once it is installed and in your path you can run it from terminal. It will throw an error if you have incorrectly formatted puzzles, and show output of what would be created if you have all correctly formatted puzzles.
 
 ## Githook pdd
 
 > The commit hook command is pretty simple for now, but in the future if there were rules that needed to be added, or files excluded they would be added here.
 
-```shell
+```sh
 # ../scripts/pdd-commit-hook.sh
+
+pdd
 ```
 
 Much like the embedme githook, in this repo there is a pdd githook. It will run pdd prior to committing to ensure that no one is committing malformed puzzles. If there is a malformed puzzle the commit will not go through until the puzzles are corrected.
@@ -405,6 +483,10 @@ If it finds a malformed puzzle it will error, otherwise it will succeed the buil
 pdd is automated using a webhook which on every commit pushed to GitHub notifies 0pdd who then creates/closes issues based on puzzles left in the repository. It is a pretty simple implementation and works almost instantly. Just have follow the documentation posted on their [pdd in action page](https://www.yegor256.com/2017/04/05/pdd-in-action.html).
 
 > Note: I had a lot of trouble getting it to work originally when following the instructions, but that is because there were all sorts of malformed puzzles in my code (that I didn't write). It should just work seemlessly as long as you don't have malformed puzzles. An issue is that in the webhook history it will return 200s whether the puzzles are all good, or malformed, so you won't have any idea that something is wrong until you run pdd locally.
+
+## More on PDD Workflow
+
+The best way to see and understand pdd is to [watch the webinar](https://www.yegor256.com/2017/04/05/pdd-in-action.html) that explains it, and talks about 0pdd, the service that creates and closes issues in github based on puzzles left in documents.
 
 # Generate Infrastructure Diagrams from Terraform With CloudCraft
 
