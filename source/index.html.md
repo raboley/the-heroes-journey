@@ -30,32 +30,43 @@ code_clipboard: true
 
 ## General Repository Concepts
 
-@todo #48:15mins Clean up the embedme section to look good.
+# EmbedMe - Auto-Updating script block documentation
 
-# Script Examples in Documentation using Embedme
+## Problem It Solves
 
-Problem: I create documentation with code samples from scripts that become out of date as I update scripts but forget to update the overall documentation.
+I create documentation with code samples from scripts that become out of date as I update scripts but forget to update the overall documentation.
 
-Solution: embed script paths into script blocks and run embedme prior to commit so that it will populate script contents into the script blocks automatically keeping any script content up to date.
-This is run as a git pre-commit hook so that prior to a commit that impacts either the scripts directory, or the index.html.md file, embedme will run and update any urls then add the files and commit them.
+## Solution
 
-Example: script blocks need to have specific extensions for embedme to work. There are a lot of scriptblock extensions documented in the [README.md for embedme](https://github.com/zakhenry/embedme#multi-language). The [EmbedMe README.md](https://github.com/zakhenry/embedme#embedme) does a great job explaining how it works with a simple gif example at the top, but for an example used in this repo see below explaining how the pre-commit hook works.
+```sh
+# ../scripts/embedme.sh
 
-> Note that the path to the script needs to be absolute, or relative to the path of the script being injected. That is why the paths below are ../ because this file is in the source/ directory, and not the root so we need the scripts to be referenced one directory above.
+# Only run embedme on the index.html.md file for slate because
+# currently that is the only file that has script references
+# embedded into it.
+npx embedme ./source/index.html.md
+```
 
-For this example I will purposely use shell, when it needs to be sh for embedme to work on shell scripts (so my example stays in tact). Below is a shell block with a reference to the file .pre-commit.sh and nothing else.
+EmbedMe takes a script path from a script block and populates that script block with the content of the script. This will ensure that every time EmbedMe is run it will keep those script blocks up to date.
+
+The next issue that arises is you have to remember to run EmbedMe prior to commiting code changes. That problem is solved with a git pre-commit hook. With a pre-commit hook, prior to commiting a file that impacts either the scripts directory, or the index.html.md file, embedme will run and update any urls then add the files and commit them.
+
+## Example Usage
+
+> inject this reference to a script in the md file (index.html.md for this example)
 
 ```shell
 # ../.pre-commit.sh
 ```
 
-After running embedme on this example **note I would have to change shell to sh for this to work, which can be seen in the next example.**
+> execute embedme on the file containing this reference (note yours should be sh above, not shell for it to work.)
 
 ```sh
 npx embedme ./source/index.html.md
 ```
 
-Then the contents of the precommit script will automatically be updated in the script block like below.
+> Then the contents of the precommit script will automatically be updated in the script block like below.
+
 
 ```sh
 # ../.pre-commit.sh
@@ -67,6 +78,16 @@ source ~/.bash_profile
 # Pdd pre-commit hook so that if there is going to a pdd issue it is caught prior to commit.
 . ./scripts/pdd-commit-hook.sh
 ```
+
+Script blocks need to have specific extensions for embedme to work. There are a lot of scriptblock extensions documented in the [README.md for embedme](https://github.com/zakhenry/embedme#multi-language). Also the [EmbedMe README.md](https://github.com/zakhenry/embedme#embedme) does a great job explaining how it works with a simple gif example at the top.
+
+> Note that the path to the script needs to be absolute, or relative to the path of the script being injected. 
+
+That is why the paths below are ../ because this file is in the source/ directory, and not the root so we need the scripts to be referenced one directory above.
+
+For this example I will purposely use shell, when it needs to be sh for embedme to work on shell scripts (so my example stays in tact). Below is a shell block with a reference to the file .pre-commit.sh and nothing else.
+
+After running embedme on this example **note I would have to change shell to sh for this to work, which can be seen in the next example.**
 
 This command is idempotent, so it can be run over and over again. This will allow us to update this script block automatically as the underlying scripts are updated. The next question is how do we make this happen automatically? Enter [githooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks).
 
@@ -100,7 +121,9 @@ The embedme.sh script is very simple
 ```sh
 # ../scripts/embedme.sh
 
-# testing the new filter
+# Only run embedme on the index.html.md file for slate because
+# currently that is the only file that has script references
+# embedded into it.
 npx embedme ./source/index.html.md
 ```
 
@@ -300,7 +323,9 @@ Seems like update to code via these diagrams would be a manual process, and be h
 ```sh
 # ../scripts/embedme.sh
 
-# testing the new filter
+# Only run embedme on the index.html.md file for slate because
+# currently that is the only file that has script references
+# embedded into it.
 npx embedme ./source/index.html.md
 ```
 
