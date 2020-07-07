@@ -307,7 +307,16 @@
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#project-specific-concepts" class="toc-h1 toc-link" data-title="Project Specific Concepts">Project Specific Concepts</a>
               <ul class="toc-list-h2">
+                  <li>
+                    <a href="#makefile" class="toc-h2 toc-link" data-title="Makefile">Makefile</a>
+                  </li>
+                  <li>
+                    <a href="#githooks" class="toc-h2 toc-link" data-title="githooks">githooks</a>
+                  </li>
                   <li>
                     <a href="#general-repository-concepts" class="toc-h2 toc-link" data-title="General Repository Concepts">General Repository Concepts</a>
                   </li>
@@ -411,11 +420,47 @@
 <div style="width: 480px; height: 360px; margin: 30px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/3bb76760-6e9b-4405-bd06-0f20594a0c6c" id="mOfa7samMO-B"></iframe></div>
 
 <p>@todo #34:30mins Create section explaining githook as a general concept, and then reference the other githook sections here.</p>
+<h1 id='project-specific-concepts'>Project Specific Concepts</h1>
+<p>There are some project specific implementations that help development processies that will be covered in this section. It will go over the generic things and how they are implemented in this project and link to the specifics.</p>
+<h2 id='makefile'>Makefile</h2>
+<blockquote>
+<p>to install dependencies of this repo run</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>make init
+</code></pre></div>
+<blockquote>
+<p>this requires ruby, and will setup a git pre-commit hook</p>
+</blockquote>
 
-<p>@todo #34:30mins Talk about the makefile as a general concept and reference how init, docs and serve-docs work.</p>
+<p>Makefiles can be super complicated, but this project uses it to enable some simple commands to get things started quickly. They basically let you run commands starting with make in the terminal and then it will execute all commands defined by that target in the <a href="../makefile">makefile</a></p>
+
+<p><code>make init</code> will run commands to initialize a new repo and install some of the dependencies.</p>
+
+<blockquote>
+<p>To get a view of what the docs will look like locally run</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>make serve-docs
+</code></pre></div>
+<blockquote>
+<p>then open <a href="http://localhost:4567">http://localhost:4567</a> in your browser
+<strong>Note</strong> you will have to refresh the browser to see changes.</p>
+</blockquote>
+
+<p><code>make serve-docs</code> will run commands to serve the documentation in your local browser on <a href="http://localhost:4567">http://localhost:4567</a></p>
+
+<blockquote>
+<p>After adding script blocks, or updating scripts run</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>make embedme
+</code></pre></div>
+<blockquote>
+<p>to update script blocks. (this will happen on commit regardless)</p>
+</blockquote>
+
+<p><code>make embedme</code> will run embedme on markdown documentation files to add script contents to script blocks.</p>
 
 <p>@todo #39:30mins Talk about how webhooks work as a general concept then link to the webhook for 0pdd.</p>
-<h2 id='general-repository-concepts'>General Repository Concepts</h2><h1 id='embedme-auto-updating-script-block-documentation'>EmbedMe - Auto-Updating script block documentation</h1><h2 id='problem-it-solves'>Problem It Solves</h2>
+<h2 id='githooks'>githooks</h2><h2 id='general-repository-concepts'>General Repository Concepts</h2><h1 id='embedme-auto-updating-script-block-documentation'>EmbedMe - Auto-Updating script block documentation</h1><h2 id='problem-it-solves'>Problem It Solves</h2>
 <p>I create documentation with code samples from scripts that become out of date as I update scripts but forget to update the overall documentation.</p>
 <h2 id='solution'>Solution</h2><div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># ../scripts/embedme.sh</span>
 
