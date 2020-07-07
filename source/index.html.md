@@ -315,6 +315,8 @@ Simply by going to lucid chart and creating a new document, then select embed an
 
 Now whenever that [source lucid chart](https://app.lucidchart.com/documents/edit/e9f142be-ca5e-4177-8f14-36c544f655ca/-gyaVl7tAo0L#?folder_id=home&browser=icon) is updated you will see it update here shortly after. No more repeat copy paste or stale diagrams
 
+@todo #48:15mins Clean up PDD section of documentation
+
 # Small Incremental changes with PDD
 
 ## Problem
