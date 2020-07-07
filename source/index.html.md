@@ -63,9 +63,37 @@ make embedme
 
 `make embedme` will run embedme on markdown documentation files to add script contents to script blocks.
 
-@todo #39:30mins Talk about how webhooks work as a general concept then link to the webhook for 0pdd.
-
 ## githooks
+
+> To enable the githook(s) for this project run
+
+```shell
+make init
+```
+
+> The contents of the git hook are a set of scripts
+
+```sh
+# ../.pre-commit.sh
+
+source ~/.bash_profile
+# embedme pre-commit hook so that if some script or documentation 
+# was updated to include more scripts the documentation pages get updated
+. ./scripts/pre-commit-filter.sh ". scripts/embedme.sh; git add ./source/index.html.md"
+# Pdd pre-commit hook so that if there is going to a pdd issue it is caught prior to commit.
+. ./scripts/pdd-commit-hook.sh
+```
+
+Githooks allow for events to trigger commands based on git commands. This project uses githooks to run certain commands prior to doing a commit. This allows documentation to be up to date, puzzles to always be correctly formed, and in the future potentially code linters to run.
+
+These are shared in source control by having scripts in the root of the repsitory and then using a symlink to link that file to the .git/hook folder where githooks need to be stored to be correct. The bad part is that those .git/hooks are not shared in version control, so a symlink is the best way to do it.
+
+The githook is just a set of scripts/steps that will run whenever `git commit` command is run before it completes.
+
+There are two githooks in this project, more info can be seen in those sections
+
+* [embedme](#githook-embedme)
+* [pdd](#githook-pdd)
 
 ## General Repository Concepts
 
@@ -130,7 +158,7 @@ After running embedme on this example **note I would have to change shell to sh 
 
 This command is idempotent, so it can be run over and over again. This will allow us to update this script block automatically as the underlying scripts are updated. The next question is how do we make this happen automatically? Enter [githooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks).
 
-## Githook
+## Githook EmbedMe
 
 The embedme command gets right before commiting to ensure that the index.html.md file is always up to date. This is achieved through adding a git [pre-commit hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks). This is a script that is stored in the .git/hooks directory of your project and is not normally saved in source control. by naming the file `pre-commit` it tells git to run that script prior to commiting any code. In this repo we store the script in source control, and then create a [symlink](https://www.makeuseof.com/tag/what-is-a-symbolic-link-what-are-its-uses-makeuseof-explains/) during the `make init` command so that every person that uses this repo can have the same pre-commit hook without manual steps of creating it and putting it in the .git/hooks directory of their project.
 
@@ -315,7 +343,7 @@ pdd --exclude=src/**/*.java --exclude=target/**/*
 
 Once it is installed and in your path you can run it from terminal. It will throw an error if you have incorrectly formatted puzzles, and show output of what would be created if you have all correctly formatted puzzles.
 
-## Githook
+## Githook pdd
 
 > The commit hook command is pretty simple for now, but in the future if there were rules that needed to be added, or files excluded they would be added here.
 
