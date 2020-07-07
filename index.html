@@ -335,7 +335,7 @@
                     <a href="#example-usage" class="toc-h2 toc-link" data-title="Example Usage">Example Usage</a>
                   </li>
                   <li>
-                    <a href="#githook" class="toc-h2 toc-link" data-title="Githook">Githook</a>
+                    <a href="#githook-embedme" class="toc-h2 toc-link" data-title="Githook EmbedMe">Githook EmbedMe</a>
                   </li>
               </ul>
           </li>
@@ -372,7 +372,7 @@
                     <a href="#install-pdd-locally" class="toc-h2 toc-link" data-title="Install PDD locally">Install PDD locally</a>
                   </li>
                   <li>
-                    <a href="#githook-2" class="toc-h2 toc-link" data-title="Githook">Githook</a>
+                    <a href="#githook-pdd" class="toc-h2 toc-link" data-title="Githook pdd">Githook pdd</a>
                   </li>
                   <li>
                     <a href="#github-action" class="toc-h2 toc-link" data-title="GitHub Action">GitHub Action</a>
@@ -458,9 +458,37 @@
 </blockquote>
 
 <p><code>make embedme</code> will run embedme on markdown documentation files to add script contents to script blocks.</p>
+<h2 id='githooks'>githooks</h2>
+<blockquote>
+<p>To enable the githook(s) for this project run</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>make init
+</code></pre></div>
+<blockquote>
+<p>The contents of the git hook are a set of scripts</p>
+</blockquote>
+<div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># ../.pre-commit.sh</span>
 
-<p>@todo #39:30mins Talk about how webhooks work as a general concept then link to the webhook for 0pdd.</p>
-<h2 id='githooks'>githooks</h2><h2 id='general-repository-concepts'>General Repository Concepts</h2><h1 id='embedme-auto-updating-script-block-documentation'>EmbedMe - Auto-Updating script block documentation</h1><h2 id='problem-it-solves'>Problem It Solves</h2>
+<span class="nb">source</span> ~/.bash_profile
+<span class="c"># embedme pre-commit hook so that if some script or documentation </span>
+<span class="c"># was updated to include more scripts the documentation pages get updated</span>
+<span class="nb">.</span> ./scripts/pre-commit-filter.sh <span class="s2">". scripts/embedme.sh; git add ./source/index.html.md"</span>
+<span class="c"># Pdd pre-commit hook so that if there is going to a pdd issue it is caught prior to commit.</span>
+<span class="nb">.</span> ./scripts/pdd-commit-hook.sh
+</code></pre></div>
+<p>Githooks allow for events to trigger commands based on git commands. This project uses githooks to run certain commands prior to doing a commit. This allows documentation to be up to date, puzzles to always be correctly formed, and in the future potentially code linters to run.</p>
+
+<p>These are shared in source control by having scripts in the root of the repsitory and then using a symlink to link that file to the .git/hook folder where githooks need to be stored to be correct. The bad part is that those .git/hooks are not shared in version control, so a symlink is the best way to do it.</p>
+
+<p>The githook is just a set of scripts/steps that will run whenever <code>git commit</code> command is run before it completes.</p>
+
+<p>There are two githooks in this project, more info can be seen in those sections</p>
+
+<ul>
+<li><a href="#githook-embedme">embedme</a></li>
+<li><a href="#githook-pdd">pdd</a></li>
+</ul>
+<h2 id='general-repository-concepts'>General Repository Concepts</h2><h1 id='embedme-auto-updating-script-block-documentation'>EmbedMe - Auto-Updating script block documentation</h1><h2 id='problem-it-solves'>Problem It Solves</h2>
 <p>I create documentation with code samples from scripts that become out of date as I update scripts but forget to update the overall documentation.</p>
 <h2 id='solution'>Solution</h2><div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># ../scripts/embedme.sh</span>
 
@@ -508,7 +536,7 @@ npx embedme ./source/index.html.md
 <p>After running embedme on this example <strong>note I would have to change shell to sh for this to work, which can be seen in the next example.</strong></p>
 
 <p>This command is idempotent, so it can be run over and over again. This will allow us to update this script block automatically as the underlying scripts are updated. The next question is how do we make this happen automatically? Enter <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">githooks</a>.</p>
-<h2 id='githook'>Githook</h2>
+<h2 id='githook-embedme'>Githook EmbedMe</h2>
 <p>The embedme command gets right before commiting to ensure that the index.html.md file is always up to date. This is achieved through adding a git <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">pre-commit hook</a>. This is a script that is stored in the .git/hooks directory of your project and is not normally saved in source control. by naming the file <code>pre-commit</code> it tells git to run that script prior to commiting any code. In this repo we store the script in source control, and then create a <a href="https://www.makeuseof.com/tag/what-is-a-symbolic-link-what-are-its-uses-makeuseof-explains/">symlink</a> during the <code>make init</code> command so that every person that uses this repo can have the same pre-commit hook without manual steps of creating it and putting it in the .git/hooks directory of their project.</p>
 
 <p>that causes the <a href=".pre-commit.sh">.pre-commit.sh</a> script to get run every time a user commits their code to this repo.</p>
@@ -673,7 +701,7 @@ pdd
 pdd <span class="nt">--exclude</span><span class="o">=</span>src/<span class="k">**</span>/<span class="k">*</span>.java <span class="nt">--exclude</span><span class="o">=</span>target/<span class="k">**</span>/<span class="k">*</span>
 </code></pre></div>
 <p>Once it is installed and in your path you can run it from terminal. It will throw an error if you have incorrectly formatted puzzles, and show output of what would be created if you have all correctly formatted puzzles.</p>
-<h2 id='githook-2'>Githook</h2>
+<h2 id='githook-pdd'>Githook pdd</h2>
 <blockquote>
 <p>The commit hook command is pretty simple for now, but in the future if there were rules that needed to be added, or files excluded they would be added here.</p>
 </blockquote>
