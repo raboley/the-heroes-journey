@@ -273,15 +273,19 @@ This will create a branch called gh-pages and publish the documentation static c
 
 After it has been done the first time the github action should be able to successfully publish your docs to your url.
 
-@todo #48:30mins Clean up the lucid chart section of the documentation
+# LucidChart - Diagrams embedded into Documentation
 
-# Diagrams embedded into Documentation using Lucidchart
+## Problem
 
-Problem: High leven design charts quickly become out of date if they are hard coded into documentation as an image. They are also much less valuable if they only exist as a url.
+High leven design charts quickly become out of date if they are hard coded into documentation as an image. They are also much less valuable if they only exist as a url.
 
-Solution: Lucid chart allows you to embed charts as html objects, and slate allows you to publish raw html leading to documentation always being up to date with source design charts.
+## Solution
 
-Example: Simply by going to lucid chart and creating a new document, then select embed and copy the embed url.
+Lucid chart allows you to embed charts as html objects, and slate allows you to publish raw html leading to documentation always being up to date with source design charts.
+
+## Example
+
+Simply by going to lucid chart and creating a new document, then select embed and copy the embed url.
 
 > To make a gif like this you can screen cap your screen on mac using
 >
