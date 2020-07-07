@@ -30,6 +30,8 @@ code_clipboard: true
 
 ## General Repository Concepts
 
+@todo #48:15mins Clean up the embedme section to look good.
+
 # Script Examples in Documentation using Embedme
 
 Problem: I create documentation with code samples from scripts that become out of date as I update scripts but forget to update the overall documentation.
