@@ -19,7 +19,7 @@ this will include:
 
 ## ACT 1
 
-@todo #51:60mins Write the outline to the story.
+@todo #51:30mins Write the Oridinary World chapter
 
 ### 1. The Ordinary World
 
