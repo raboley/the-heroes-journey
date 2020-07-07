@@ -317,9 +317,6 @@
                   <li>
                     <a href="#githooks" class="toc-h2 toc-link" data-title="githooks">githooks</a>
                   </li>
-                  <li>
-                    <a href="#general-repository-concepts" class="toc-h2 toc-link" data-title="General Repository Concepts">General Repository Concepts</a>
-                  </li>
               </ul>
           </li>
           <li>
@@ -340,8 +337,17 @@
               </ul>
           </li>
           <li>
-            <a href="#multiple-language-tab-options-with-slate" class="toc-h1 toc-link" data-title="Multiple Language Tab Options with Slate">Multiple Language Tab Options with Slate</a>
+            <a href="#slate-dynamic-docs-with-language-tabs" class="toc-h1 toc-link" data-title="Slate - Dynamic Docs With Language Tabs">Slate - Dynamic Docs With Language Tabs</a>
               <ul class="toc-list-h2">
+                  <li>
+                    <a href="#problem" class="toc-h2 toc-link" data-title="Problem">Problem</a>
+                  </li>
+                  <li>
+                    <a href="#solution-2" class="toc-h2 toc-link" data-title="Solution">Solution</a>
+                  </li>
+                  <li>
+                    <a href="#installation" class="toc-h2 toc-link" data-title="Installation">Installation</a>
+                  </li>
                   <li>
                     <a href="#running-slate-locally" class="toc-h2 toc-link" data-title="Running Slate locally">Running Slate locally</a>
                   </li>
@@ -357,10 +363,10 @@
             <a href="#small-incremental-changes-with-pdd" class="toc-h1 toc-link" data-title="Small Incremental changes with PDD">Small Incremental changes with PDD</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#problem" class="toc-h2 toc-link" data-title="Problem">Problem</a>
+                    <a href="#problem-2" class="toc-h2 toc-link" data-title="Problem">Problem</a>
                   </li>
                   <li>
-                    <a href="#solution-2" class="toc-h2 toc-link" data-title="Solution">Solution</a>
+                    <a href="#solution-3" class="toc-h2 toc-link" data-title="Solution">Solution</a>
                   </li>
                   <li>
                     <a href="#example" class="toc-h2 toc-link" data-title="Example">Example</a>
@@ -488,7 +494,9 @@
 <li><a href="#githook-embedme">embedme</a></li>
 <li><a href="#githook-pdd">pdd</a></li>
 </ul>
-<h2 id='general-repository-concepts'>General Repository Concepts</h2><h1 id='embedme-auto-updating-script-block-documentation'>EmbedMe - Auto-Updating script block documentation</h1><h2 id='problem-it-solves'>Problem It Solves</h2>
+<h1 id='embedme-auto-updating-script-block-documentation'>EmbedMe - Auto-Updating script block documentation</h1>
+<p>EmbedMe allows one to keep documentation in script blocks up to date.</p>
+<h2 id='problem-it-solves'>Problem It Solves</h2>
 <p>I create documentation with code samples from scripts that become out of date as I update scripts but forget to update the overall documentation.</p>
 <h2 id='solution'>Solution</h2><div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># ../scripts/embedme.sh</span>
 
@@ -555,7 +563,7 @@ npx embedme ./source/index.html.md
 
 <p>This is because the pre-commit hook using npx takes time to run, and we only want to run it if a file that could potentially be used in that as a reference is updated.</p>
 
-<p>Then the commands passed in are to run the embedme.sh script, and then add the new updated <a href="./source/index.html.md">./source/index.html.md</a> that has been modified by the embedme command. </p>
+<p>Then the commands passed in are to run the embedme.sh script, and then add the new updated <a href="./source/index.html.md">./source/index.html.md</a> that has been modified by the embedme command.</p>
 
 <p>The embedme.sh script is very simple</p>
 <div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># ../scripts/embedme.sh</span>
@@ -570,21 +578,40 @@ npx embedme ./source/index.html.md
 <p>The git add is very important to do after that, otherwise it will update the file, but not commit it leaving the next change to be commited manually by the user.</p>
 
 <p>The result of all that leaves us with an <a href="./source/index.html.md">./source/index.html.md</a> file that is always up to date with any code files that are embedded within it.</p>
-<h1 id='multiple-language-tab-options-with-slate'>Multiple Language Tab Options with Slate</h1>
-<p>Problem: Code is complicated, and sometimes you have differnet languages, operating systems or frameworks to deal with and normal markdown just isn&#39;t enough. There needs to be an easier to navigate documentation system that allows for langauge tabs and more dynamic documentation styles.</p>
-
-<p>Solution: <a href="https://github.com/slatedocs/slate">Slate</a> is web based documentation system that has a description pane and a code pane so that it is easy to follow code examples on the right hand side of the window, and more prose like descriptions in the middle with an easy to navigate table of contents on the left. It even has search functionality. The best thing about slate is you can embed code examples and allow users to select from different tabs based on what is needed for them. It also lets you embed html into the document, so more advanced constructs can be added such as embedding a live lucidchart into the documentation. All this allows for documentation to be live realtime, more easy to understand and navigate while all being written in an <a href="https://github.com/slatedocs/slate/wiki/Markdown-Syntax">extended markdown</a> syntax.</p>
-
-<p>Installation: To add slate to your project the easist thing is to clone their repo, and start modifying it to fit your project as described in their <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively">getting started guide</a>. Once you have a slate project setup or you have just downloaded a repo with slate that you want to work on locally, you can install dependencies depending on your OS, such as these <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively#installing-dependencies-on-macos">macOS dependency install instructions</a></p>
+<h1 id='slate-dynamic-docs-with-language-tabs'>Slate - Dynamic Docs With Language Tabs</h1><h2 id='problem'>Problem</h2>
+<p>Code is complicated, and sometimes you have differnet languages, operating systems or frameworks to deal with and normal markdown just isn&#39;t enough. There needs to be an easier to navigate documentation system that allows for langauge tabs and more dynamic documentation styles.</p>
+<h2 id='solution-2'>Solution</h2>
+<p><a href="https://github.com/slatedocs/slate">Slate</a> is web based documentation system that has a description pane and a code pane so that it is easy to follow code examples on the right hand side of the window, and more prose like descriptions in the middle with an easy to navigate table of contents on the left. It even has search functionality. The best thing about slate is you can embed code examples and allow users to select from different tabs based on what is needed for them. It also lets you embed html into the document, so more advanced constructs can be added such as embedding a live lucidchart into the documentation. All this allows for documentation to be live realtime, more easy to understand and navigate while all being written in an <a href="https://github.com/slatedocs/slate/wiki/Markdown-Syntax">extended markdown</a> syntax.</p>
+<h2 id='installation'>Installation</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>make init
+</code></pre></div>
+<p>To add slate to your project the easist thing is to clone their repo, and start modifying it to fit your project as described in their <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively">getting started guide</a>. Once you have a slate project setup or you have just downloaded a repo with slate that you want to work on locally, you can install dependencies depending on your OS, such as these <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively#installing-dependencies-on-macos">macOS dependency install instructions</a></p>
 
 <p>after you have the dependencies installed you can run <code>make init</code> to install all the ruby gems needed for slate to run successfully. Under the hood it is just a <code>bundle install</code> command.</p>
 <h2 id='running-slate-locally'>Running Slate locally</h2>
+<blockquote>
+<p>Run slate locally</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>make serve-docs
+</code></pre></div>
+<blockquote>
+<p>Open <a href="http://192.168.0.49:4567">http://192.168.0.49:4567</a> in browsers</p>
+</blockquote>
+
 <p>To run slate locally simply run <code>make serve-docs</code> to serve the documents on your localhost. then you can go to <a href="http://192.168.0.49:4567">http://192.168.0.49:4567</a> to view your documents locally. The nice thing is as long as the process is running you can make updates to this document and then refresh the browser to see the effects.</p>
 
 <p>@todo #22:30mins For slate figure out a good way to do local development with an auto refresh like situation.</p>
 
 <p>This browser link happens using the <a href="https://middlemanapp.com/basics/install/">middleman</a> web server application. It will host the website using ruby runtime.</p>
 <h2 id='deploying-your-docs-to-github-pages'>Deploying Your docs to Github Pages</h2>
+<blockquote>
+<p>deploy to github pages use</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">.</span> ../deploy.sh
+</code></pre></div>
+<blockquote>
+<p>or just commit to master branch</p>
+</blockquote>
+
 <p>Once you have your slate docs working locally you can <a href="https://github.com/slatedocs/slate/wiki/Deploying-Slate">publish them to GitHub Pages</a>.</p>
 
 <p>This repo is setup with a GitHub action that will do this automatically on <code>master</code> branch.</p>
@@ -615,6 +642,8 @@ npx embedme ./source/index.html.md
 </blockquote>
 
 <p>After it has been done the first time the github action should be able to successfully publish your docs to your url.</p>
+
+<p>@todo #48:30mins Clean up the lucid chart section of the documentation</p>
 <h1 id='diagrams-embedded-into-documentation-using-lucidchart'>Diagrams embedded into Documentation using Lucidchart</h1>
 <p>Problem: High leven design charts quickly become out of date if they are hard coded into documentation as an image. They are also much less valuable if they only exist as a url.</p>
 
@@ -652,9 +681,9 @@ npx embedme ./source/index.html.md
 <div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/e9f142be-ca5e-4177-8f14-36c544f655ca" id="phyaKTPhMxyz"></iframe></div>
 
 <p>Now whenever that <a href="https://app.lucidchart.com/documents/edit/e9f142be-ca5e-4177-8f14-36c544f655ca/-gyaVl7tAo0L#?folder_id=home&amp;browser=icon">source lucid chart</a> is updated you will see it update here shortly after. No more repeat copy paste or stale diagrams</p>
-<h1 id='small-incremental-changes-with-pdd'>Small Incremental changes with PDD</h1><h2 id='problem'>Problem</h2>
+<h1 id='small-incremental-changes-with-pdd'>Small Incremental changes with PDD</h1><h2 id='problem-2'>Problem</h2>
 <p>Features and improvemnts are really hard to fit into small chunks. PDD enables really small incremental improvements that should last for a very short amount of time. This combats the feeling that something we think will be easy and take an hour ends up requiring 3 weeks to fully complete.</p>
-<h2 id='solution-2'>Solution</h2>
+<h2 id='solution-3'>Solution</h2>
 <p>With PDD you just spend the amount of time that the puzzle says to do, and do as much as possible then creating additional puzzles to fill in the gaps. Allowing things to be complete, even though it isn&#39;t 100% completed, but it is in a better state and closer to that 100% done. This allows people to get something done without spinning their wheels for days to get something added.</p>
 <h2 id='example'>Example</h2>
 <p>I can&#39;t do actual puzzle syntax in this, so I will use to-do and to make it a real puzzle you just have to remove the <code>-</code> from the to-do to make it real.</p>
