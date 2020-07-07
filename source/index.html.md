@@ -24,9 +24,48 @@ code_clipboard: true
 
 @todo #34:30mins Create section explaining githook as a general concept, and then reference the other githook sections here.
 
-@todo #34:30mins Talk about the makefile as a general concept and reference how init, docs and serve-docs work.
+# Project Specific Concepts
+
+There are some project specific implementations that help development processies that will be covered in this section. It will go over the generic things and how they are implemented in this project and link to the specifics.
+
+## Makefile
+
+> to install dependencies of this repo run
+
+```shell
+make init
+```
+
+> this requires ruby, and will setup a git pre-commit hook
+
+Makefiles can be super complicated, but this project uses it to enable some simple commands to get things started quickly. They basically let you run commands starting with make in the terminal and then it will execute all commands defined by that target in the [makefile](../makefile)
+
+`make init` will run commands to initialize a new repo and install some of the dependencies.
+
+> To get a view of what the docs will look like locally run
+
+```shell
+make serve-docs
+```
+
+> then open [http://localhost:4567](http://localhost:4567) in your browser
+> **Note** you will have to refresh the browser to see changes.
+
+`make serve-docs` will run commands to serve the documentation in your local browser on [http://localhost:4567](http://localhost:4567)
+
+> After adding script blocks, or updating scripts run
+
+```shell
+make embedme
+```
+
+> to update script blocks. (this will happen on commit regardless)
+
+`make embedme` will run embedme on markdown documentation files to add script contents to script blocks.
 
 @todo #39:30mins Talk about how webhooks work as a general concept then link to the webhook for 0pdd.
+
+## githooks
 
 ## General Repository Concepts
 
