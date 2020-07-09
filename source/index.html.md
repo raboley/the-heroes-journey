@@ -18,7 +18,7 @@ code_clipboard: true
 
 # The Heroes Journey
 
-@todo #51:60mins write act 2
+@todo #51:60mins write act 2 abridged version.
 
 ## ACT 2
 
