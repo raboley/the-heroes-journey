@@ -30,13 +30,6 @@ He has good relationships with all the developers and knows enough about their A
 
 2. The Call of Adventure
 
-@todo #51:15mins write the Call to adventure chapter
-
-Reids hat company is so successful that they are bought out by an apparel company who prides themselves on being a software comany.
-All their code is open source, and so shortly after the aquisition the hat pricing api goes opensource. Now Reid and his team have potential issues and features created by other internal teams, or external teams who use their api. 
-Others realize they can use the hat API to price just about any type of product and has integrations built in for all the major shippers.
-Reids team isn't setup for 
-
 Reid's company continues to grow and they expand into selling t-shirts.
 They hire some new developers and a new manager to create the new T-shirt team, but are unable to find a technical writer to handle documentation for the team.
 The new manager works with his current manager to "promote" Reid to lead technical writer and begin writing documentation for both the hat and T-Shirt team.
@@ -51,13 +44,8 @@ Months go by and that feeling of exhiliration and pride begins to fade as he wor
 He begins to feel like something has to change.
 He asks his manager to hire another technical writer, but his manager says it just isn't in the budget anymore, but they are so thrilled with the work he has been doing.
 
-
-
-One of the developers, Ruby said that developers could try to document their own changes, but the manager refused.
-
-* Weeks go by and developers make tons of changes that Reid has to keep up to date as their technical writer. He can't keep up and a developer complains that a set of instructions is out of date and documentation is unclear.
-
 3. Refusal of the Call
+
 
 * Reid refuses to make windows instructions because he thinks that it makes his documentation too complicated, and he doesn't have time for it.
 
