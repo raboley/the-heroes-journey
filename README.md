@@ -22,7 +22,7 @@ this will include:
 Reid is a technical writer for a software company who knows how to make README documentation.
 One day a developer rewrote all the shell scripts associated with Reids documentation into powershell and asks Reid to update all his documentation to include those scripts for windows users which could look really great as a website.
 He says his README documentation is enough and has all the information need once he puts in both versions, then you just have to look for it, and he doesn't have time to learn how to make it into a website.
-Another developer, Ruby, is hired at Reids company and she shows him how to use embedme to update all the script blocks in documentation to include powershell as well and automatically, which makes including the new scripts much easier.
+Another developer, Ruby, is hired at Reids company and she shows him how to use embedme to update all the script blocks in documentation to include powershell as well and automatically, which makes including the new scripts much easier using the command `make embedme` to simplify this task.
 With all Reids new free time she shows him slate, something she worked on at her last company, which prompts him to [click the link](https://raboley.github.io/the-heroes-journey/) and enter a whole new world.
 
 

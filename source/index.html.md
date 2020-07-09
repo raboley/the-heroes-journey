@@ -22,6 +22,14 @@ code_clipboard: true
 
 ## ACT 2
 
+Reid felt a littled jarred upon entering the new world, so Ruby gave him a map.
+
+<div style="width: 480px; height: 360px; margin: 30px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/3bb76760-6e9b-4405-bd06-0f20594a0c6c" id="mOfa7samMO-B"></iframe></div>
+
+@todo #54:15mins get the link to the lucid chart source.
+
+She said this map, much like this world, was magic and would automatically update as the magical world was updated.
+
 ### 6. Tests, Allies, Enemies
 
 * Tests -> big G allows you to go and meet people.
