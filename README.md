@@ -19,16 +19,13 @@ this will include:
 
 ## ACT 1
 
-@todo #51:30mins Write the Oridinary World chapter
-
 ### 1. The Ordinary World
 
-* Reid Me introduced. Has a terminal. Understands markdown, git and embedding code blocks. Reid's team makes a pipeline tool that lots of developers use.
-
-In the beginning there was only text. The humble README lived to serve with his only tool of raw text.
-He produced documentation in flat text form for developers around the world to read and everything was good.
+Reid is a technical writer at a medium sized hat company. He is on a team with a couple developers, testers and a manager. He is in charge of writing all the documentation for the features that the developers create for their hat pricing service. He doesn't have much experience writing code, but understands source control well enough to update READMEs in his team's repos and can write markdown. He enjoys his job and has a reasonable workload that allows him to keep a 9-5 and leave it all at work when he goes home.
 
 2. The Call of Adventure
+
+@todo #51:15mins write the Call to adventure chapter
 
 * Weeks go by and developers make tons of changes that Reid has to keep up to date as their technical writer. He can't keep up and a developer complains that a set of instructions is out of date and documentation is unclear.
 
