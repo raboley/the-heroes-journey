@@ -19,6 +19,36 @@ this will include:
 
 ## ACT 1
 
+Reid is a technical writer for a software company who knows how to make README documentation.
+One day a developer rewrote all the shell scripts associated with Reids documentation into powershell and asks Reid to update all his documentation to include those scripts for windows users which could look really great as a website.
+He says his README documentation is enough and has all the information need once he puts in both versions, then you just have to look for it, and he doesn't have time to learn how to make it into a website.
+Another developer, Ruby, is hired at Reids company and she shows him how to use embedme to update all the script blocks in documentation to include powershell as well and automatically, which makes including the new scripts much easier.
+With all Reids new free time she shows him slate, something she worked on at her last company, which prompts him to [click the link](https://raboley.github.io/the-heroes-journey/) and enter a whole new world.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## ACT 1
+
 ### 1. The Ordinary World
 
 Reid is a technical writer at a medium sized hat company.
@@ -46,8 +76,12 @@ He asks his manager to hire another technical writer, but his manager says it ju
 
 3. Refusal of the Call
 
-
-* Reid refuses to make windows instructions because he thinks that it makes his documentation too complicated, and he doesn't have time for it.
+One day a new developer comes onboard to the t-shirt team who is only used to windows, while the rest of the team uses macs. 
+Reid had created very clear instructions on how to make their development tools, and application start up for macs, but didn't ever write anything for how to do it on windows.
+After a while the new developer gets it to work, and the manager asks Reid to make instructions for windows.
+Reid says he doesn't have time to make those instructions, and he would have to put it in a whole new place in the documentation since he can't have both windows and mac commands in the same place in their README without it looking really messy.
+One of the new developers Ruby, asks Reid to consider moving some of their documentation out of a README and into a more web based format.
+She says that they can be a lot more flexible and make things much cleaner if they have more control over it like a fully web based site would give them.
 
 4. Meeting the Mentor
 
