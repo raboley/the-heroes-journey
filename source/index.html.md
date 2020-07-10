@@ -19,11 +19,10 @@ code_clipboard: true
 
 # The Heroes Journey
 
-@todo #51:60mins write act 2 abridged version.
-
 ## ACT 2
 
 ### Embed Diagrams with Lucid Chart
+
 Reid felt a littled jarred upon entering the new world, so Ruby gave him a map.
 
 <div style="width: 480px; height: 360px; margin: 30px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/3bb76760-6e9b-4405-bd06-0f20594a0c6c" id="mOfa7samMO-B"></iframe></div>
@@ -68,81 +67,6 @@ Perfect.
 "Yep! they are going to be so excited to see all these new things I can do!" Reid exclaimed.
 
 Reid found the link to [go back to his team in ordinary world](https://github.com/raboley/the-heroes-journey/blob/master/README.md)
-
-"You can do? Reid, even if you are going to be able to do documentation a little faster now for your two teams, what about if they start adding more teams? You can't keep stretching yourself as your team starts growing. You need to teach others how to do these things, and help them make documentation part of their daily work. That is the only way to truly allow your team to be autonomous" said Ruby.
-
-Reid thought to himself, what she says is right, but what will he do if he is no longer essential to his teams. If they are able to document and 
-
-
-
-### 6. Tests, Allies, Enemies
-
-* Tests -> big G allows you to go and meet people.
-* Outcomes
-* Embedme (Meet dee help him embed script contents)
-* Lucid Chart embed (Lucy shows him how to )
-* maybe godocs? if I can get it to work
-* Mr. Hook teaches git hooks
-* Peggy teaches pdd?
-
-Time and Help enter as enemies to README, time causing his documentation to become out of date due to Help adding features and not updating documentation.
-
-Coming across embedme he found that the steps written as scripts could now be embedded into his documents automatically. simply by runing `npx embedme ./source/index.html.md` he was able to pull the contents from his scripts and embed them in the file automatically allowing for every step to be captured in a way that requires setup steps to work.
-
-He later found make who helped him even further strengthen his resolve. By using `make docs` he was able to run all the steps required to generate the documentation in a way that was repeatable. Now if only this step could also be run automatically when Help added new features.
-
-> enter git commit hooks
-
-Now that we have a git hook to automatically update the index.html.md we found it slowed down the commit process, so we only wanted to run it if the scripts directory or index.html.md file were modified.
-
-To do that we need to update the githook with some if logic.
-
-By getting the diff and then grepping those files for the pattern we can run the commit hook only when files we expect to cause changes in the index.html.md to be impacted. Now it should hopefully go really fast when I commit these things.
-
-> enter puzzle driven development
-
-To install pdd which will allow you to see if your puzzles will be created prior to pushing to origin. If you have malformed puzzles it can break pdd and cause it to do nothing and not tell you what is happening in the webhooks.
-
-```shell
-make init
-```
-
-This will install the pdd gem, and add it to bash profile so that you can run
-
-```shell
-pdd
-```
-
-to see what kind of puzzles will be created in github.
-
-found more documentation in the [pdd source code](https://github.com/yegor256/pdd).
-
-### 7. Approach to the Inmost Cave
-
-* Reid confronts the fact that he can't do it all, and needs to convince others to pitch in their daily work at the risk of eliminating his part of the team. Doesn't have self confidence to code.
-
-
-### 8. The Ordeal
-
-* Reid tries to write code and makes a small cli tool after failing.
-
-### 9. Reward (Seizing the Sword)
-
-* Reid is able to make a cli tool and teach someone else how to use it using godocs.
-
-## ACT 3
-
-### 10. The Road Back
-
-* Reid goes back to the ordinary world and tries to teach their team how to add documentation and gets rejected.
-
-### 11. Resurrection
-
-* Reid refuses to document anymore and asks the developers to document their changes explaining the tools he learned.
-
-### 12. Return with the Elixir
-
-* Reid's team takes his advice and teaches him to be a developer.
 
 # v Special Features v
 
