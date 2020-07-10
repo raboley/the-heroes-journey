@@ -288,7 +288,7 @@
     </script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;powershell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -299,6 +299,7 @@
       <img src="images/logo-1e815a84.png" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="powershell">powershell</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -447,14 +448,49 @@
       <div class="content">
         <h1 id='the-heroes-journey'>The Heroes Journey</h1>
 <p>@todo #51:60mins write act 2 abridged version.</p>
-<h2 id='act-2'>ACT 2</h2>
+<h2 id='act-2'>ACT 2</h2><h3 id='embed-diagrams-with-lucid-chart'>Embed Diagrams with Lucid Chart</h3>
 <p>Reid felt a littled jarred upon entering the new world, so Ruby gave him a map.</p>
 
 <div style="width: 480px; height: 360px; margin: 30px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/3bb76760-6e9b-4405-bd06-0f20594a0c6c" id="mOfa7samMO-B"></iframe></div>
 
-<p>@todo #54:15mins get the link to the lucid chart source.</p>
+<p>She said <a href="https://app.lucidchart.com/invitations/accept/aead9c55-ced7-4465-bc98-2417fc3c813d">this map</a>, much like this world, was magic and would automatically update as the magical world was updated. This was possible by embedding the lucid chart&#39;s embed html in slate&#39;s markdown. Normal markdown won&#39;t allow this kind of thing to run, but slate will render it correctly.</p>
 
-<p>She said this map, much like this world, was magic and would automatically update as the magical world was updated.</p>
+<p>Reid thought back to times where he had spent hours taking screenshots of Architects diagrams, and copy pasting them into developers READMEs to keep the big picture for their repo up to date. This would save him hours, and he would no longer be responsible for keeping architects and developer documentation in sync.</p>
+
+<p>Excited to see what was next Reid looked at the magical map for what Ruby and him would explore next. He noted that much like the map stated they had already explored:</p>
+
+<ul>
+<li>Script examples in documentation was covered by embedme</li>
+<li>Live diagrams embedded into documentation was covered by our magical lucid chart map</li>
+</ul>
+
+<p>So the next step would be multiple language tab option?</p>
+<h3 id='multiple-language-tabs-with-slate'>Multiple Language Tabs With Slate</h3>
+<p>Reid said &quot;So Ruby, you have been here before, what is this next place we are headed? Multiple language tab options with slate sounds like it might help solve my windows vs mac problem. That windows developer wanted his instructions in the same place as everything else, is that what this is for?&quot;</p>
+
+<p>Ruby said, &quot;Correct! If you look to the right hand side of the world you can see a pane that is sometimes empty, but othertimes it contains code in many different lanugages. Let&#39;s see an example.</p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">cp</span> ./file.txt ./copies/file.txt
+</code></pre></div><div class="highlight"><pre class="highlight powershell tab-powershell"><code><span class="nf">Copy-Item</span><span class="w"> </span><span class="o">.</span><span class="nx">\file.txt</span><span class="w"> </span><span class="o">.</span><span class="nx">\copies\file.txt</span><span class="w">
+</span></code></pre></div>
+<p>See over in the lanuage pane we can see a tab for both options, shell being for mac and powershell being for windows. You can choose at the top what language you want to see, and then all the options not related to your language are hidden. The great thing is that this is all defined in markdown, so you don&#39;t have to learn any new syntax.&quot;</p>
+
+<p>Reid wondered aloud, &quot;Well what about things that aren&#39;t language specific? Like if I needed json or yaml examples?&quot;</p>
+
+<p>Ruby said, &quot;Anything that isn&#39;t covered in the overall language sections we define will always show up, so for this page anything not shell or powershell will always show up.&quot;</p>
+
+<p>Reid thought to himself that this would help him do exactly what that developer wanted. It would allow him to make it easy to describe the same set of instructions for multiple languages.</p>
+
+<p>Perfect.</p>
+
+<p>&quot;Well it looks like you have traveled to all the places on your map, time to take your learnings back to your team?&quot; Ruby said.</p>
+
+<p>&quot;Yep! they are going to be so excited to see all these new things I can do!&quot; Reid exclaimed.</p>
+
+<p>Reid found the link to <a href="https://github.com/raboley/the-heroes-journey/blob/master/README.md">go back to his team in ordinary world</a></p>
+
+<p>&quot;You can do? Reid, even if you are going to be able to do documentation a little faster now for your two teams, what about if they start adding more teams? You can&#39;t keep stretching yourself as your team starts growing. You need to teach others how to do these things, and help them make documentation part of their daily work. That is the only way to truly allow your team to be autonomous&quot; said Ruby.</p>
+
+<p>Reid thought to himself, what she says is right, but what will he do if he is no longer essential to his teams. If they are able to document and </p>
 <h3 id='6-tests-allies-enemies'>6. Tests, Allies, Enemies</h3>
 <ul>
 <li>Tests -&gt; big G allows you to go and meet people.</li>
@@ -963,6 +999,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="powershell">powershell</a>
           </div>
       </div>
     </div>
