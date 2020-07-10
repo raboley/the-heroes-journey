@@ -10,12 +10,6 @@ this will include:
 * Enabling tab controls to allow for multiple versions of code to be contained in one set of documentation ([slate](https://github.com/slatedocs/slate/wiki/Markdown-Syntax))
 * Embed diagramming into documentation as a living diagram not an image ([lucidChart + Github](https://www.lucidchart.com/pages/integrations/github))
 * Automatically create issues using puzzle development ([pdd](http://www.0pdd.com))
-* ?generate diagrams for infrastructure from terraform code ([cloudCraft](https://medium.com/faun/modules-tf-convert-visual-aws-diagram-into-terraform-configurations-e61fb0574b10))
-* Execute examples in documentation to test for accuracy ([dredd](https://rollout.io/blog/testing-code-examples-in-documentation/)) ([official](https://dredd.org/en/latest/))
-
-* Objective: Clear and up to date documentation
-* Obstacle: lots of developers and languages as part of their team
-* Outcome: Documentation automation makes all developers become documenters and Reid ends up becoming a developer
 
 ## ACT 1
 
@@ -25,60 +19,31 @@ He says his README documentation is enough and has all the information need once
 Another developer, Ruby, is hired at Reids company and she shows him how to use embedme to update all the script blocks in documentation to include powershell as well and automatically, which makes including the new scripts much easier using the command `make embedme` to simplify this task.
 With all Reids new free time she shows him slate, something she worked on at her last company, which prompts him to [click the link](https://raboley.github.io/the-heroes-journey/) and enter a whole new world.
 
+---> [Join Reid and Ruby in the magical world in ACT 2](https://raboley.github.io/the-heroes-journey/) <-----
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
 
 ## ACT 3
-
-@todo #51:60mins Clean up the story and get rid of the draft stuff.
 
 Back in the ordinary world Reid readied himself to apply what he had learned to his work with his team.
 He excitedly showed the senior developers how they can use lucid chart to embed diagrams into the documentation, removing the need for him to keep those up to date. He told the developers how to reference scripts and code blocks in READMEs to automatically keep script blocks up to date. He showed his team the link to the magical world, and how they can support so many different types of code and documentation styles using it. The team was excited and thought the new style was so much cleaner than their old method of just READMEs.
