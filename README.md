@@ -47,6 +47,46 @@ With all Reids new free time she shows him slate, something she worked on at her
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## ACT 3
+
+
+
+
+
+
+
+
+
+
 ## ACT 1
 
 ### 1. The Ordinary World

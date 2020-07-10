@@ -3,6 +3,7 @@ title: The Magical World
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
+  - powershell
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -22,13 +23,57 @@ code_clipboard: true
 
 ## ACT 2
 
+### Embed Diagrams with Lucid Chart
 Reid felt a littled jarred upon entering the new world, so Ruby gave him a map.
 
 <div style="width: 480px; height: 360px; margin: 30px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://app.lucidchart.com/documents/embeddedchart/3bb76760-6e9b-4405-bd06-0f20594a0c6c" id="mOfa7samMO-B"></iframe></div>
 
-@todo #54:15mins get the link to the lucid chart source.
+She said [this map](https://app.lucidchart.com/invitations/accept/aead9c55-ced7-4465-bc98-2417fc3c813d), much like this world, was magic and would automatically update as the magical world was updated. This was possible by embedding the lucid chart's embed html in slate's markdown. Normal markdown won't allow this kind of thing to run, but slate will render it correctly.
 
-She said this map, much like this world, was magic and would automatically update as the magical world was updated.
+Reid thought back to times where he had spent hours taking screenshots of Architects diagrams, and copy pasting them into developers READMEs to keep the big picture for their repo up to date. This would save him hours, and he would no longer be responsible for keeping architects and developer documentation in sync.
+
+Excited to see what was next Reid looked at the magical map for what Ruby and him would explore next. He noted that much like the map stated they had already explored:
+
+* Script examples in documentation was covered by embedme
+* Live diagrams embedded into documentation was covered by our magical lucid chart map
+
+So the next step would be multiple language tab option?
+
+### Multiple Language Tabs With Slate
+
+Reid said "So Ruby, you have been here before, what is this next place we are headed? Multiple language tab options with slate sounds like it might help solve my windows vs mac problem. That windows developer wanted his instructions in the same place as everything else, is that what this is for?"
+
+Ruby said, "Correct! If you look to the right hand side of the world you can see a pane that is sometimes empty, but othertimes it contains code in many different lanugages. Let's see an example.
+
+```shell
+cp ./file.txt ./copies/file.txt
+```
+
+```powershell
+Copy-Item .\file.txt .\copies\file.txt
+```
+
+See over in the lanuage pane we can see a tab for both options, shell being for mac and powershell being for windows. You can choose at the top what language you want to see, and then all the options not related to your language are hidden. The great thing is that this is all defined in markdown, so you don't have to learn any new syntax."
+
+Reid wondered aloud, "Well what about things that aren't language specific? Like if I needed json or yaml examples?"
+
+Ruby said, "Anything that isn't covered in the overall language sections we define will always show up, so for this page anything not shell or powershell will always show up."
+
+Reid thought to himself that this would help him do exactly what that developer wanted. It would allow him to make it easy to describe the same set of instructions for multiple languages.
+
+Perfect.
+
+"Well it looks like you have traveled to all the places on your map, time to take your learnings back to your team?" Ruby said.
+
+"Yep! they are going to be so excited to see all these new things I can do!" Reid exclaimed.
+
+Reid found the link to [go back to his team in ordinary world](https://github.com/raboley/the-heroes-journey/blob/master/README.md)
+
+"You can do? Reid, even if you are going to be able to do documentation a little faster now for your two teams, what about if they start adding more teams? You can't keep stretching yourself as your team starts growing. You need to teach others how to do these things, and help them make documentation part of their daily work. That is the only way to truly allow your team to be autonomous" said Ruby.
+
+Reid thought to himself, what she says is right, but what will he do if he is no longer essential to his teams. If they are able to document and 
+
+
 
 ### 6. Tests, Allies, Enemies
 
